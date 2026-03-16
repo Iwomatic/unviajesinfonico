@@ -1,0 +1,1057 @@
+/* Basic Reset and Global Styles */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'EB Garamond', serif;
+    color: #fff;
+    background-color: #000;
+    font-size: 18px;
+}
+
+a {
+    color: #667eea;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #764ba2;
+}
+
+/* Skip Navigation Link - Accessibility */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #667eea;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 10000;
+    border-radius: 0 0 4px 0;
+}
+
+.skip-link:focus {
+    top: 0;
+    outline: 3px solid #fff;
+    outline-offset: 2px;
+}
+
+/* Focus Styles for All Interactive Elements - WCAG AA Compliance */
+button:focus,
+a:focus,
+.menu-toggle:focus,
+.menu-item:focus,
+.next-btn:focus,
+.prev-btn:focus,
+.start-btn:focus,
+.dock-toggle-btn:focus,
+.scroll-to-top-btn:focus {
+    outline: 2px solid #667eea;
+    outline-offset: 3px;
+}
+
+/* Enhanced focus for specific buttons */
+.start-btn:focus,
+.next-btn:focus,
+.prev-btn:focus {
+    outline: 3px solid #fff;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 5px rgba(102, 126, 234, 0.3);
+}
+
+/* Focus for menu items */
+.menu-item:focus {
+    outline: 2px solid #8a2be2;
+    outline-offset: 2px;
+    background-color: rgba(138, 43, 226, 0.2);
+}
+
+/* Hamburger Menu Button */
+.menu-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    padding: 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.menu-toggle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #764ba2 0%, #667eea 100%);
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+}
+
+.menu-toggle:hover::before {
+    opacity: 1;
+}
+
+.menu-toggle:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Side Menu */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -350px;
+    width: 350px;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(20, 20, 20, 0.98), rgba(0, 0, 0, 0.98));
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-y: auto;
+    box-shadow: 2px 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.side-menu.open {
+    left: 0;
+}
+
+.menu-header {
+    padding: 30px 20px 20px 90px;
+    border-bottom: 2px solid rgba(138, 43, 226, 0.5);
+}
+
+.menu-header h3 {
+    margin: 0;
+    font-size: 1.3em;
+    font-variant: small-caps;
+    color: #fff;
+}
+
+
+.menu-list {
+    list-style: none;
+    padding: 20px 0;
+    margin: 0;
+}
+
+.menu-list li {
+    margin: 0;
+}
+
+.menu-item {
+    display: block;
+    padding: 15px 30px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: all 0.4s ease;
+    border-left: 4px solid transparent;
+}
+
+.menu-item:hover {
+    background-color: rgba(138, 43, 226, 0.2);
+    border-left-color: #8a2be2;
+    padding-left: 40px;
+}
+
+.menu-item:active {
+    background-color: rgba(138, 43, 226, 0.4);
+}
+
+/* Menu Overlay */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url('images/hero_bg.jpg') no-repeat center center/cover;
+}
+
+.hero h1 {
+    font-size: 6em;
+    text-shadow: 2px 2px 5px #000;
+    font-variant: small-caps;
+}
+
+.hero h2 {
+    font-size: 3em;
+    text-shadow: 1px 1px 3px #000;
+    font-variant: small-caps;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3em;
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+}
+
+/* Story Sections */
+.story-section {
+    position: relative;
+    height: 100vh;
+    /* Each section takes up the full viewport height */
+    overflow: hidden;
+    /* Important for containing parallax children */
+    z-index: 0;
+}
+
+.story-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.7) 0%,
+            rgba(0, 0, 0, 0.1) 10%,
+            transparent 30%,
+            transparent 70%,
+            rgba(0, 0, 0, 0.1) 90%,
+            rgba(0, 0, 0, 0.8) 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.background-parallax {
+    position: absolute;
+    top: -30vh;
+    left: 0;
+    width: 100%;
+    height: 160vh;
+    /* Make it taller to enable the parallax movement */
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+    /* Place behind the content */
+}
+
+.background-parallax::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 150px rgba(0, 0, 0, 0.8),
+        inset 0 0 300px rgba(0, 0, 0, 0.5),
+        inset 0 100px 150px rgba(0, 0, 0, 0.6),
+        inset 0 -100px 150px rgba(0, 0, 0, 0.6);
+    pointer-events: none;
+}
+
+.content-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 1100px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 20px;
+    align-items: start;
+    z-index: 10;
+}
+
+.content-container h2,
+.content-container-centered h2,
+.content-main h2 {
+    font-variant: small-caps;
+    font-size: 3em;
+    margin-bottom: 20px;
+    margin-block-start: 0.1em;
+}
+
+.content-container-centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 800px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    z-index: 10;
+}
+
+.content-main {
+    text-align: center;
+}
+
+.video-clip video {
+    width: 100%;
+    max-width: 640px;
+    margin-top: 20px;
+}
+
+/* Button Styles */
+.start-btn,
+.next-btn {
+    position: relative;
+    background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 0.95em;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    font-variant: small-caps;
+    letter-spacing: 1px;
+    min-width: 180px;
+    height: 54px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.start-btn::before,
+.next-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #764ba2 0%, #667eea 100%);
+    border-radius: 50px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+}
+
+.start-btn:hover::before,
+.next-btn:hover::before {
+    opacity: 1;
+}
+
+.start-btn:hover,
+.next-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.start-btn:active,
+.next-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Button Group Layout */
+.button-group {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+/* Remove margin from buttons inside button group */
+.button-group .next-btn,
+.button-group .prev-btn {
+    margin-top: 0;
+}
+
+/* Previous Song Button - Different Styling */
+.prev-btn {
+    position: relative;
+    background: linear-gradient(45deg, #6c757d 0%, #495057 100%);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 0.95em;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    font-variant: small-caps;
+    letter-spacing: 1px;
+    min-width: 180px;
+    height: 54px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.prev-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #495057 0%, #6c757d 100%);
+    border-radius: 50px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+}
+
+.prev-btn:hover::before {
+    opacity: 1;
+}
+
+.prev-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.prev-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Button text responsive control */
+.short-text {
+    display: none;
+}
+
+.full-text {
+    display: inline;
+}
+
+/* Responsive adjustments for buttons */
+@media (max-width: 768px) {
+
+    /* Smaller titles on mobile for more usable space */
+
+    /* Show short button text on mobile */
+    .short-text {
+        display: inline;
+    }
+
+    .full-text {
+        display: none;
+    }
+
+    .content-container h2,
+    .content-container-centered h2,
+    .content-main h2 {
+        font-size: 2em;
+        margin-bottom: 15px;
+    }
+
+    .button-group {
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: nowrap;
+    }
+
+    .prev-btn,
+    .next-btn {
+        flex: 1;
+        min-width: 0;
+        padding: 12px 16px;
+        font-size: 0.85em;
+        letter-spacing: 0.5px;
+    }
+}
+
+/* Lyrics Container - Spotify Style */
+.lyrics-container {
+    width: 100%;
+    height: 100%;
+    max-height: 400px;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 16px;
+    color: #ffffff;
+    font-family: 'EB Garamond', serif;
+    overflow-y: auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+}
+
+.lyrics-header {
+    font-size: 1rem;
+
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #1db954;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 8px;
+}
+
+.lyrics-content {
+    line-height: 1.6;
+}
+
+.lyrics-line {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    color: #d1d1d1;
+    padding: 2px 0;
+    transition: color 0.2s ease;
+}
+
+.lyrics-line:hover {
+    color: #ffffff;
+}
+
+/* Empty lines for spacing */
+.lyrics-line:empty {
+    margin-bottom: 12px;
+}
+
+/* Verse/Chorus labels */
+.lyrics-line.section-label {
+    color: #1db954 !important;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+/* Custom scrollbar for lyrics */
+.lyrics-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.lyrics-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+}
+
+.lyrics-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+}
+
+.lyrics-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive adjustments for lyrics */
+@media (max-width: 1024px) {
+    .content-container {
+        grid-template-columns: 1fr 250px;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        width: 80%;
+        max-width: 800px;
+    }
+
+    .lyrics-container {
+        max-height: 200px;
+    }
+}
+
+/* Scroll to Top Button */
+.scroll-to-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+}
+
+.scroll-to-top-btn.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.scroll-to-top-btn:hover {
+    background: linear-gradient(45deg, #764ba2 0%, #667eea 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.scroll-to-top-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-to-top-btn span {
+    display: block;
+    line-height: 1;
+}
+
+/* Responsive adjustments for scroll button */
+@media (max-width: 768px) {
+    .scroll-to-top-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 15px;
+    }
+}
+
+/* Dock Toggle Button */
+.dock-toggle-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    pointer-events: all;
+}
+
+.dock-toggle-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+}
+
+.dock-toggle-btn .dock-icon {
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+/* Content Container Docked State - Collapse instead of translate */
+.content-container {
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+.content-container.docked {
+    width: 60px;
+    max-width: 60px;
+    min-height: 60px;
+    height: auto;
+    padding: 5px;
+    left: auto;
+    right: 20px;
+    transform: translateY(-50%);
+    background-color: rgba(102, 126, 234, 0.95);
+    border: 2px solid rgba(118, 75, 162, 0.9);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    cursor: pointer;
+}
+
+.content-container.docked:hover {
+    transform: translateY(-50%) scale(1.08);
+    background-color: rgba(118, 75, 162, 0.98);
+    border-color: rgba(102, 126, 234, 1);
+    box-shadow: 0 8px 30px rgba(102, 126, 234, 0.6),
+        0 0 40px rgba(118, 75, 162, 0.4);
+}
+
+/* Hide content when docked, only show button */
+.content-container.docked>*:not(.dock-toggle-btn) {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    visibility: hidden;
+}
+
+/* When docked, center and style the button */
+.content-container.docked .dock-toggle-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    border-color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-container.docked .dock-toggle-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+.content-container.docked .dock-toggle-btn .dock-icon {
+    display: block;
+    transform: none;
+    line-height: 1;
+}
+
+/* Undock hint when docked */
+.content-container.docked .dock-toggle-btn::after {
+    content: 'Expandir';
+    position: absolute;
+    right: calc(100% + 10px);
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 0.65rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.content-container.docked .dock-toggle-btn:hover::after {
+    opacity: 1;
+}
+
+/* Responsive adjustments for dock */
+@media (max-width: 768px) {
+    .dock-toggle-btn {
+        width: 44px;
+        height: 44px;
+        font-size: 15px;
+        top: 8px;
+        right: 8px;
+    }
+
+    .content-container.docked {
+        width: 50px;
+        max-width: 50px;
+        min-height: 50px;
+        right: 10px;
+    }
+}
+
+/* Add more specific styles and animations as needed */
+/* Loading Screen */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(ellipse at center, #1a0033 0%, #000000 70%);
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1s ease-out, visibility 1s ease-out;
+}
+
+.loading-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Fog Layers */
+.fog-layer {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(138, 43, 226, 0.15) 0%, transparent 70%);
+    opacity: 0;
+}
+
+.fog-1 {
+    animation: fog-drift-1 8s ease-in-out infinite;
+    animation-delay: 0s;
+}
+
+.fog-2 {
+    animation: fog-drift-2 10s ease-in-out infinite;
+    animation-delay: 2s;
+}
+
+.fog-3 {
+    animation: fog-drift-3 12s ease-in-out infinite;
+    animation-delay: 4s;
+}
+
+@keyframes fog-drift-1 {
+
+    0%,
+    100% {
+        transform: translate(-10%, -10%) scale(1);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translate(10%, 10%) scale(1.5);
+        opacity: 0.3;
+    }
+}
+
+@keyframes fog-drift-2 {
+
+    0%,
+    100% {
+        transform: translate(10%, -10%) scale(1.2);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translate(-10%, 10%) scale(1.8);
+        opacity: 0.2;
+    }
+}
+
+@keyframes fog-drift-3 {
+
+    0%,
+    100% {
+        transform: translate(-5%, 10%) scale(1.1);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translate(5%, -10%) scale(1.6);
+        opacity: 0.25;
+    }
+}
+
+/* Loading Content */
+.loading-content {
+    position: relative;
+    z-index: 10001;
+    text-align: center;
+    animation: mysterious-pulse 3s ease-in-out infinite;
+}
+
+.loading-header {
+    font-variant: small-caps;
+    font-size: 2em;
+}
+
+.loading-logo {
+    max-width: 300px;
+    height: auto;
+    filter: drop-shadow(0 0 30px rgba(138, 43, 226, 0.8)) drop-shadow(0 0 60px rgba(138, 43, 226, 0.4));
+    animation: logo-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes logo-glow {
+    0% {
+        filter: drop-shadow(0 0 20px rgba(138, 43, 226, 0.6)) drop-shadow(0 0 40px rgba(138, 43, 226, 0.3));
+        transform: scale(1);
+    }
+
+    100% {
+        filter: drop-shadow(0 0 40px rgba(138, 43, 226, 1)) drop-shadow(0 0 80px rgba(138, 43, 226, 0.6));
+        transform: scale(1.05);
+    }
+}
+
+@keyframes mysterious-pulse {
+
+    0%,
+    100% {
+        opacity: 0.9;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.loading-text {
+    margin-top: 30px;
+    font-size: 1.5em;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(138, 43, 226, 0.8), 0 0 20px rgba(138, 43, 226, 0.4);
+    letter-spacing: 2px;
+    opacity: 1;
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+    transform: translateY(0);
+}
+
+.loading-text.fade-out {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+/* Loading Bar */
+.loading-bar {
+    width: 300px;
+    height: 4px;
+    background: rgba(138, 43, 226, 0.2);
+    border-radius: 2px;
+    margin: 20px auto 0;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(138, 43, 226, 0.3);
+}
+
+.loading-progress {
+    height: 100%;
+    background: linear-gradient(90deg,
+            rgba(138, 43, 226, 0.8) 0%,
+            rgba(138, 43, 226, 1) 50%,
+            rgba(138, 43, 226, 0.8) 100%);
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.8);
+    animation: loading-progress 2s ease-in-out infinite;
+    width: 0%;
+}
+
+@keyframes loading-progress {
+    0% {
+        width: 0%;
+        transform: translateX(0);
+    }
+
+    50% {
+        width: 70%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+/* Reduced Motion Support - WCAG AA Compliance */
+@media (prefers-reduced-motion: reduce) {
+
+    /* Disable all animations and transitions */
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    /* Disable fog animations completely */
+    .fog-layer {
+        animation-name: none !important;
+        animation-duration: 0s !important;
+        opacity: 0 !important;
+        display: none !important;
+    }
+
+    /* Disable loading screen animations */
+    .loading-logo {
+        animation: none !important;
+    }
+
+    .loading-text {
+        transition: none !important;
+    }
+
+    /* Disable parallax effect */
+    .background-parallax {
+        transform: none !important;
+        position: fixed !important;
+    }
+
+    /* Disable hover effects */
+    .menu-toggle:hover,
+    .menu-item:hover,
+    .start-btn:hover,
+    .next-btn:hover,
+    .prev-btn:hover,
+    .dock-toggle-btn:hover {
+        transform: none !important;
+    }
+
+    /* Keep focus outlines for accessibility */
+    *:focus {
+        transition: none !important;
+    }
+}
+
+/* Cache buster: 1763754386 */

@@ -1,0 +1,1771 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <title>Ekyrian: Un Viaje Sinfónico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Skip Navigation Link -->
+    <a href="#main" class="skip-link">Saltar al contenido principal</a>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading-screen">
+        <div class="fog-layer fog-1"></div>
+        <div class="fog-layer fog-2"></div>
+        <div class="fog-layer fog-3"></div>
+        <div class="loading-content">
+            <img src="images/Logo Ekyrian.png" alt="Ekyrian Logo" class="loading-logo">
+            <div class="loading-header">Un Viaje Sinfónico</div>
+            <div class="loading-text">Llenando barriles</div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Hamburger Menu Button -->
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Side Menu -->
+    <nav class="side-menu" id="side-menu">
+        <div class="menu-header">
+            <h3>Índice del Concierto</h3>
+        </div>
+        <ul class="menu-list">
+            <li><a href="#intro" class="menu-item" data-target="intro">Introducción</a></li>
+            <li><a href="#song-1" class="menu-item" data-target="song-1">1. Ekyrian</a></li>
+            <li><a href="#song-2" class="menu-item" data-target="song-2">2. Alza la Vista</a></li>
+            <li><a href="#song-3" class="menu-item" data-target="song-3">3. Angua</a></li>
+            <li><a href="#song-4" class="menu-item" data-target="song-4">4. Valor</a></li>
+            <li><a href="#song-5" class="menu-item" data-target="song-5">5. Kaguya</a></li>
+            <li><a href="#song-6" class="menu-item" data-target="song-6">6. La Danza de los Muertos</a></li>
+            <li><a href="#song-7" class="menu-item" data-target="song-7">7. Colores en el Viento</a></li>
+            <li><a href="#song-8" class="menu-item" data-target="song-8">8. El Cuento de la Oscuridad</a></li>
+            <li><a href="#song-9" class="menu-item" data-target="song-9">9. Volverte a Soñar</a></li>
+            <li><a href="#song-10" class="menu-item" data-target="song-10">10. El Alquimista</a></li>
+            <li><a href="#song-11" class="menu-item" data-target="song-11">11. El Alma del Viento</a></li>
+            <li><a href="#song-12" class="menu-item" data-target="song-12">12. El Aprendiz</a></li>
+            <li><a href="#song-13" class="menu-item" data-target="song-13">13. La Travesía del Navegante</a></li>
+            <li><a href="#song-14" class="menu-item" data-target="song-14">14. El Templo del Mar</a></li>
+            <li><a href="#song-15" class="menu-item" data-target="song-15">15. Rutas Misteriosas</a></li>
+            <li><a href="#song-16" class="menu-item" data-target="song-16">16. Ítaca</a></li>
+            <li><a href="#song-17" class="menu-item" data-target="song-17">17. La Balada de Wilfred el Enano</a></li>
+            <li><a href="#song-18" class="menu-item" data-target="song-18">18. El Rey Blanco</a></li>
+            <li><a href="#song-19" class="menu-item" data-target="song-19">19. La Llegada de Krampus</a></li>
+            <li><a href="#song-20" class="menu-item" data-target="song-20">20. Más Allá de la Tempestad</a></li>
+        </ul>
+    </nav>
+
+    <!-- Overlay for menu -->
+    <div class="menu-overlay" id="menu-overlay"></div>
+
+    <header class="hero" role="banner">
+        <h1>Ekyrian & Orquesta Athanor</h1>
+        <h2>Una Experiencia de Concierto en Vivo</h2>
+        <button class="start-btn" id="start-experience"
+            aria-label="Comenzar la experiencia del concierto">Empezar</button>
+    </header>
+
+    <main id="main" role="main" tabindex="-1">
+        <section class="story-section" id="intro">
+            <div class="background-parallax" style="background-image: url('images/intro_bg.jpg');" aria-hidden="true">
+            </div>
+            <div class="content-container-centered">
+                <h2>Introducción</h2>
+                <p>Bienvenido a la historia de Ekyrian: Un Viaje Sinfónico. Prepárate para revivir la increíble
+                    experiencia de
+                    Ekyrian en directo con el impresionante sonido de la Orquesta Athanor, en el concierto que dimos el
+                    pasado
+                    15 de Febrero en el Teatro Pilar Bardem de Rivas. Puedes poner el concierto en Youtube o en el
+                    BluRay que has
+                    comprado, y seguir las canciones en esta aplicación, donde verás curiosidades y anécdotas, o
+                    detalles en los que fijarte.
+                    Muchas gracias por acompañarnos en este viaje, tu apoyo es imprescincible para nosotros.
+                    Un abrazo fuerte,
+                    Ekyrian y la Orquesta Athanor.
+                </p>
+                <button class="next-btn" data-target="song-1" aria-label="Ir a la primera canción">Comenzar el
+                    Concierto</button>
+            </div>
+        </section>
+
+        <section class="story-section" id="song-1">
+            <div class="background-parallax" style="background-image: url('images/song1_bg.jpg');" aria-hidden="true">
+            </div>
+            <div class="content-container">
+                <button class="dock-toggle-btn" title="Colapsa a la derecha"
+                    aria-label="Colapsar contenido de la Canción 1 - Ekyrian">
+                    <span class="dock-icon">→</span>
+                </button>
+                <div class="content-main">
+                    <h2>Ekyrian</h2>
+                    <p>La primera canción del concierto es Ekyrian, y antes de ella la Intro. Durante la intro
+                        estabámos un poco nerviosos,
+                        y no lo visteis, pero cuando ya estaba sonando la Intro, nuestro bajista Rob no estaba en el
+                        escenario, porque estaba repartiendo
+                        atrezzo para los colaboradores. Casi nos da un ataque.
+                        En esta canción contamos con la colaboración de nuestros amigos de Versus Madrid, que hicieron
+                        una impresionante coreografía
+                        con espadas y armaduras reales. Escucha bien y oirás las espadas chocar!
+                        Otra cosa graciosa que ocurre en esta canción es que a Ibai (Guitarra) se le olvida que tiene
+                        que entrar a tocar
+                        la guitarra acústica y le veréis correr por el escenario para llegar.</p>
+                    <!--<div class="video-clip">
+                        <video controls src="videos/song1_clip.mp4"></video>
+                    </div>-->
+                    <button class="next-btn" data-target="song-2" aria-label="Ir a la Canción 2 - Alza la Vista"><span
+                            class="full-text">Siguiente Canción</span><span class="short-text">Siguiente</span>
+                        →</button>
+                </div>
+                <div class="lyrics-container">
+                    <div class="lyrics-header">Ekyrian</div>
+                    <div class="lyrics-content">
+                        <div class="lyrics-line section-label">Estrofa 1:</div>
+                        <div class="lyrics-line">Álzate, abre los ojos, despiértate y</div>
+                        <div class="lyrics-line">Dime qué ves</div>
+                        <div class="lyrics-line">Más allá de lo que nunca soñaste está</div>
+                        <div class="lyrics-line">Este lugar</div>
+                        <div class="lyrics-line">Ya no mires atrás, porque no vas a encontrar</div>
+                        <div class="lyrics-line">El camino de vuelta a la realidad</div>
+                        <div class="lyrics-line">Pronto verás que donde has llegado ya</div>
+                        <div class="lyrics-line">La cordura de poco te servirá</div>
+                        <div class="lyrics-line">Tu camino estará donde no llegan tus pies</div>
+                        <div class="lyrics-line">La libertad ha quedado a tu merced</div>
+                        <div class="lyrics-line">Tu destino será lo que hagas de él</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line section-label">Estribillo:</div>
+                        <div class="lyrics-line">Donde el delirio es dueño y se esconde la realidad</div>
+                        <div class="lyrics-line">dentro de un sueño vive este reino de eternidad</div>
+                        <div class="lyrics-line">Donde la luz no llega y se acaba la oscuridad</div>
+                        <div class="lyrics-line">Lejos del viento, fuera del tiempo has venido a parar</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line section-label">Estrofa 2:</div>
+                        <div class="lyrics-line">Ya no habrá nadie que dicte ninguna ley</div>
+                        <div class="lyrics-line">En tu moral</div>
+                        <div class="lyrics-line">Solo tú has de hallar luz en la oscuridad</div>
+                        <div class="lyrics-line">Bien en el mal</div>
+                        <div class="lyrics-line">El secreto hallarás de la inmortalidad</div>
+                        <div class="lyrics-line">Sobre tinta y papel nunca morirás</div>
+                        <div class="lyrics-line">Encontrarás en el viento tú nación</div>
+                        <div class="lyrics-line">Y tu hogar en el verso de una canción</div>
+                        <div class="lyrics-line">No olvidarás tu senda de libertad</div>
+                        <div class="lyrics-line">Pentagramas y notas te guiarán</div>
+                        <div class="lyrics-line">A su compás latirá tu corazón</div>
+                        <div class="lyrics-line">si resuena su ritmo en tu interior</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line section-label">Estribillo:</div>
+                        <div class="lyrics-line">Donde el delirio es dueño y se esconde la realidad</div>
+                        <div class="lyrics-line">dentro de un sueño vive este reino de eternidad</div>
+                        <div class="lyrics-line">Donde la luz no llega y se acaba la oscuridad</div>
+                        <div class="lyrics-line">Lejos del viento, fuera del tiempo has venido a parar</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line section-label">Estribillo:</div>
+                        <div class="lyrics-line">Donde el delirio es dueño y se esconde la realidad</div>
+                        <div class="lyrics-line">dentro de un sueño vive este reino de eternidad</div>
+                        <div class="lyrics-line">Donde la luz no llega y se acaba la oscuridad</div>
+                        <div class="lyrics-line">Lejos del viento, fuera del tiempo has venido</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line section-label">Estribillo Final:</div>
+                        <div class="lyrics-line">Donde la voz es brisa y la música, luz de sol</div>
+                        <div class="lyrics-line">Una tormenta pinta un paisaje en el corazón</div>
+                        <div class="lyrics-line">Busca en los viejos mapas, esa luz que hay en tu interior</div>
+                        <div class="lyrics-line">Y halla el camino al reino perdido</div>
+                        <div class="lyrics-line">Allí nacen tus sueños</div>
+                        <div class="lyrics-line">Y tus temores mueren</div>
+                        <div class="lyrics-line">La música es tu hogar</div>
+                        <div class="lyrics-line"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="story-section" id="song-2">
+            <div class="background-parallax" style="background-image: url('images/song2_bg.jpg');" aria-hidden="true">
+            </div>
+            <div class="content-container">
+                <button class="dock-toggle-btn" title="Colapsa a la derecha"
+                    aria-label="Colapsar contenido de la Canción 2 - Alza la Vista">
+                    <span class="dock-icon">→</span>
+                </button>
+                <div class="content-main">
+                    <h2>Alza la Vista</h2>
+                    <p>Alza la Vista salió en 2019 en el disco <strong>Más Allá de la Tempestad</strong> y es ya un
+                        clásico que no falta en nuestros directo.
+                        Los muy cafeteros os daréis cuenta de que <strong>Jorge</strong> cambia la letra del primer
+                        verso de "estás" a
+                        "estáis", un guiño al público que vino al <strong>Pilar Bardem</strong>. Otra curiosidad es que
+                        el padre de <strong>Aitor Balda</strong> (flauta y whistles),
+                        toca en la orquesta! Toca la tuba, y es un crack! En el 3:20 podréis verle al fondo detrás de
+                        los cellos. Veréis de nuevo el espectáculo lamentable de Ibai corriendo por el escenario para
+                        entrar a tocar la guitarra acústica después del solo. En fin, es la cruz que tenemos con este
+                        chico &#128532;.
+                    </p>
+                    <div class="button-group">
+                        <button class="prev-btn" data-target="song-1" aria-label="Volver a la Canción 1 - Ekyrian">←
+                            <span class="full-text">Canción Anterior</span><span
+                                class="short-text">Anterior</span></button>
+                        <button class="next-btn" data-target="song-3" aria-label="Ir a la Canción 3 - Angua"><span
+                                class="full-text">Siguiente Canción</span><span class="short-text">Siguiente</span>
+                            →</button>
+                    </div>
+                </div>
+                <div class="lyrics-container">
+                    <div class="lyrics-header">Alza la Vista</div>
+                    <div class="lyrics-content">
+                        <div class="lyrics-line section-label">Estrofa 1:</div>
+                        <div class="lyrics-line">Crees que no sé por qué estás aquí</div>
+                        <div class="lyrics-line">Sin hogar, techo ni sitio donde ir</div>
+                        <div class="lyrics-line">Crees que en la vida este es tu lugar</div>
+                        <div class="lyrics-line">Si me sigues verás cuán errado estás</div>
+                        <div class="lyrics-line">Si tu coraje quieres probar</div>
+                        <div class="lyrics-line">Si no tienes a nadie con quién contar</div>
+                        <div class="lyrics-line">No dudes que tu destino está</div>
+                        <div class="lyrics-line">Navegando sin tregua por alta mar</div>
+                        <div class="lyrics-line">Tu compañero más leal es quien a tu lado está</div>
+                        <div class="lyrics-line">Frente a tempestades y tormentas</div>
+                        <div class="lyrics-line">Deja marchar la soledad entre la brisa y la sal</div>
+                        <div class="lyrics-line">Que respiras a pleno pulmón</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line section-label">Estribillo:</div>
+                        <div class="lyrics-line">Te mostraré que la libertad</div>
+                        <div class="lyrics-line">Tiene como frontera el ancho del mar</div>
+                        <div class="lyrics-line">Hallarás en las olas tu hogar</div>
+                        <div class="lyrics-line">En el viento la fuerza, en el sol tu compás</div>
+                        <div class="lyrics-line">Alza la vista y no volverás jamás</div>
+                        <div class="lyrics-line">A mirar atrás</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line section-label">Estrofa 2:</div>
+                        <div class="lyrics-line">A bordo no hay dueño ni señor</div>
+                        <div class="lyrics-line">Camaradas y hermanos somos tú y yo</div>
+                        <div class="lyrics-line">No seguirás más ley ni razón</div>
+                        <div class="lyrics-line">Que tu instinto, tu fuera y tu corazón</div>
+                        <div class="lyrics-line">Cada mañana te darán ímpetu la luz y el mar</div>
+                        <div class="lyrics-line">Cada noche abrigo las estrellas</div>
+                        <div class="lyrics-line">El horizonte marcará tu destino, y tu lugar</div>
+                        <div class="lyrics-line">Estará donde te lleve el viento</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line section-label">Estribillo:</div>
+                        <div class="lyrics-line">Te mostraré que la libertad</div>
+                        <div class="lyrics-line">Tiene como frontera el ancho del mar</div>
+                        <div class="lyrics-line">Hallarás en las olas tu hogar</div>
+                        <div class="lyrics-line">en el viento la fuerza, en el sol tu compás</div>
+                        <div class="lyrics-line">Alza la vista y no volverás jamás</div>
+                        <div class="lyrics-line">A mirar atrás</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line section-label">Estribillo:</div>
+                        <div class="lyrics-line">Te mostraré que la libertad</div>
+                        <div class="lyrics-line">Tiene como frontera el ancho del mar</div>
+                        <div class="lyrics-line">Hallarás en las olas tu hogar</div>
+                        <div class="lyrics-line">en el viento la fuerza, en el sol tu compás</div>
+                        <div class="lyrics-line">Alza la vista y no volverás jamás</div>
+                        <div class="lyrics-line">A mirar atrás</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="story-section" id="song-3">
+            <div class="background-parallax" style="background-image: url('images/song3_bg.jpg');" aria-hidden="true">
+            </div>
+            <div class="content-container">
+                <button class="dock-toggle-btn" title="Colapsa a la derecha"
+                    aria-label="Colapsar contenido de la Canción 3 - Angua">
+                    <span class="dock-icon">→</span>
+                </button>
+                <div class="content-main">
+                    <h2>Angua</h2>
+                    <p>Con <strong>Angua</strong> nos remontamos a 2016, con una versión actualizada del tema que habla
+                        de Angua von Überwald,
+                        la mujer lobo del universo de <a href="https://es.wikipedia.org/wiki/Mundodisco" target="_blank"
+                            rel="noopener noreferrer">Mundodisco</a> de Terry Pratchett, donde es la primera mujer en
+                        unirse a la Guardia Nocturna. Interpretando a Angua y su compañeros guardas tenemos a
+                        <strong>Lidia, Krade, y Richar</strong>, que hicieron un excelente trabajo apatrullando el
+                        <strong>Pilar Bardem</strong> para asegurarse de que nadie se pasaba de la raya.
+                    </p>
+                    <div class="button-group">
+                        <button class="prev-btn" data-target="song-2"
+                            aria-label="Volver a la Canción 2 - Alza la Vista">← <span class="full-text">Canción
+                                Anterior</span><span class="short-text">Anterior</span></button>
+                        <button class="next-btn" data-target="song-4" aria-label="Ir a la Canción 4 - Valor"><span
+                                class="full-text">Siguiente Canción</span><span class="short-text">Siguiente</span>
+                            →</button>
+                    </div>
+                </div>
+                <div class="lyrics-container">
+                    <div class="lyrics-header">Angua</div>
+                    <div class="lyrics-content">
+                        <div class="lyrics-line section-label">Estrofa 1:</div>
+                        <div class="lyrics-line">Una noche más me abro camino</div>
+                        <div class="lyrics-line">Por las gastadas calles de esta ciudad</div>
+                        <div class="lyrics-line">Será este acaso mi destino</div>
+                        <div class="lyrics-line">Vagar sin rumbo por siempre en la oscuridad</div>
+                        <div class="lyrics-line">Qué lejos quedó la tierra que me vio nacer</div>
+                        <div class="lyrics-line">Aunque muera hoy renaceré al amanecer</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line section-label">Estribillo:</div>
+                        <div class="lyrics-line">No busques más, pues jamás me encontrarás</div>
+                        <div class="lyrics-line">Ya no mires hacia atrás, no comparto tu camino</div>
+                        <div class="lyrics-line">No habrá lugar en el que vivir en paz</div>
+                        <div class="lyrics-line">Ni el recuerdo de un hogar</div>
+                        <div class="lyrics-line">Solo llevaré conmigo el rastro de tu olor</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line section-label">Estrofa 2:</div>
+                        <div class="lyrics-line">Mi entereza se quiebra si dudo</div>
+                        <div class="lyrics-line">Y mi instinto confunde el deseo y la lealtad</div>
+                        <div class="lyrics-line">Pero sé que no es este mi mundo</div>
+                        <div class="lyrics-line">La luna llena revelará la verdad</div>
+                        <div class="lyrics-line">¿Qué fue del valor que para olvidarte reuní?</div>
+                        <div class="lyrics-line">Se ha vuelto dolor y ahora camina junto a mí</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line section-label">Estribillo:</div>
+                        <div class="lyrics-line">No busques más, pues jamás me encontrarás</div>
+                        <div class="lyrics-line">Ya no mires hacia atrás, no comparto tu camino</div>
+                        <div class="lyrics-line">No habrá lugar en el que vivir en paz</div>
+                        <div class="lyrics-line">Ni el recuerdo de un hogar</div>
+                        <div class="lyrics-line">Solo llevaré conmigo en mi piel tu calor</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line section-label">Estribillo:</div>
+                        <div class="lyrics-line">No busques más, pues jamás me encontrarás</div>
+                        <div class="lyrics-line">Ya no mires hacia atrás, no comparto tu camino</div>
+                        <div class="lyrics-line">No habrá lugar en el que vivir en paz</div>
+                        <div class="lyrics-line">Ni el recuerdo de un hogar</div>
+                        <div class="lyrics-line">Yo te llevaré conmigo</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="story-section" id="song-4">
+            <div class="background-parallax" style="background-image: url('images/song4_bg.jpg');" aria-hidden="true">
+            </div>
+            <div class="content-container">
+                <button class="dock-toggle-btn" title="Colapsa a la derecha"
+                    aria-label="Colapsar contenido de la Canción 4 - Valor">
+                    <span class="dock-icon">→</span>
+                </button>
+                <div class="content-main">
+                    <h2>Valor</h2>
+                    <p>Tremendo cañonazo que tenemos con <strong>Valor</strong>, y en ésta, como empieza a saco con la
+                        flauta y el violín no
+                        es la primera vez que nos pasa que lanzamos la claqueta y <strong>Aitor y Nuria</strong> tienen
+                        que correr. Como bonus tip, ¿Sabéis de que habla la letra?
+                        ¡Seguro que no! Os damos una pista, tiene que ver con un videojuego, si lo acertais os mandamos
+                        una pegatina! Atentos a como suena la orquesta, increíble! &#127926;. A nuestro Miguelón no se
+                        le ve mucho, pero en la segunda estrofa tenéis un precioso plano de los chicos de
+                        <strong>Elephant Room Films</strong> donde están el y Jorge dándolo todo.
+                    </p>
+
+                    <div class="button-group">
+                        <button class="prev-btn" data-target="song-3" aria-label="Volver a la Canción 3 - Angua">← <span
+                                class="full-text">Canción Anterior</span><span
+                                class="short-text">Anterior</span></button>
+                        <button class="next-btn" data-target="song-5" aria-label="Ir a la Canción 5 - Kaguya"><span
+                                class="full-text">Siguiente Canción</span><span class="short-text">Siguiente</span>
+                            →</button>
+                    </div>
+                </div>
+                <div class="lyrics-container">
+                    <div class="lyrics-header">Valor</div>
+                    <div class="lyrics-content">
+                        <div class="lyrics-content">
+                            <div class="lyrics-line section-label">Estrofa 1:</div>
+                            <div class="lyrics-line">No sale aún el sol y ya debo partir,</div>
+                            <div class="lyrics-line">entre la bruma del bosque he de ir.</div>
+                            <div class="lyrics-line">Lo que hasta ayer fue un hogar para mí</div>
+                            <div class="lyrics-line">pronto un recuerdo se volverá.</div>
+                            <div class="lyrics-line"></div>
+                            <div class="lyrics-line section-label">Estrofa 2:</div>
+                            <div class="lyrics-line">Hoy dejo atrás la inocencia y la paz,</div>
+                            <div class="lyrics-line">ahora sé la verdad sobre mi destino.</div>
+                            <div class="lyrics-line">¿Quién me armará de valor para dar</div>
+                            <div class="lyrics-line">sin dudar el primer paso del camino?</div>
+                            <div class="lyrics-line"></div>
+                            <div class="lyrics-line section-label">Estribillo:</div>
+                            <div class="lyrics-line">Sin descanso marcharé, pues he de recorrer</div>
+                            <div class="lyrics-line">montañas, lagos, valles y mar.</div>
+                            <div class="lyrics-line">En el corazón ya sé que debo ser yo quien</div>
+                            <div class="lyrics-line">libere al fin mi tierra del mal.</div>
+                            <div class="lyrics-line"></div>
+                            <div class="lyrics-line section-label">Estrofa 3:</div>
+                            <div class="lyrics-line">La noche me alcanza allá donde esté</div>
+                            <div class="lyrics-line">y el viento helado penetra en mi piel.</div>
+                            <div class="lyrics-line">El sol abrasa la tierra a mis pies,</div>
+                            <div class="lyrics-line">quema mi cuerpo y mi espíritu.</div>
+                            <div class="lyrics-line"></div>
+                            <div class="lyrics-line section-label">Estrofa 4:</div>
+                            <div class="lyrics-line">¿Cuánto será lo que deba aguantar?</div>
+                            <div class="lyrics-line">sé que si miro atrás quebrarán mis fuerzas</div>
+                            <div class="lyrics-line">Si puedo hallar algo de voluntad</div>
+                            <div class="lyrics-line">será en ti, mi guardián y mi compañera.</div>
+                            <div class="lyrics-line"></div>
+                            <div class="lyrics-line section-label">Estribillo:</div>
+                            <div class="lyrics-line">Sin descanso marcharé, pues he de recorrer</div>
+                            <div class="lyrics-line">montañas, lagos, valles y mar.</div>
+                            <div class="lyrics-line">En el corazón ya sé que debo ser yo quien</div>
+                            <div class="lyrics-line">libere al fin mi tierra del mal.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section class="story-section" id="song-5">
+            <div class="background-parallax" style="background-image: url('images/song5_bg.jpg');" aria-hidden="true">
+            </div>
+            <div class="content-container">
+                <button class="dock-toggle-btn" title="Colapsa a la derecha"
+                    aria-label="Colapsar contenido de la Canción 5 - Kaguya">
+                    <span class="dock-icon">→</span>
+                </button>
+                <div class="content-main">
+                    <h2>Kaguya</h2>
+                    <p>Para Kaguya contamos con la ayuda de <strong>Carmen Mora</strong>, violinista de <a
+                            href="https://www.instagram.com/niobeband/?hl=es">Níobe</a>. Carmen fue fundamental para
+                        nosotros en 2024, ya que Nuria tuvo que viajar por estudios a Chile
+                        y fue Carmen quien nos salvó la papeleta, se vino desde Valencia y tocó con nosotros conciertos
+                        tan importantes como el Milagre Metaleiro. Contamos de nuevo con Versus Madrid, que
+                        se curraron una increíble coreografía a juego con la historia. Atentos a cómo van cambiando los
+                        tonos
+                        de las luces a medida que avanza la canción, ¡Grandísimo trabajo de <strong>Noa
+                            Zabaleta</strong> en las luces!
+                    </p>
+
+                    <div class="button-group">
+                        <button class="prev-btn" data-target="song-4" aria-label="Volver a la Canción 4 - Valor">← <span
+                                class="full-text">Canción Anterior</span><span
+                                class="short-text">Anterior</span></button>
+                        <button class="next-btn" data-target="song-6"
+                            aria-label="Ir a la Canción 6 - La Danza de los Muertos"><span class="full-text">Siguiente
+                                Canción</span><span class="short-text">Siguiente</span> →</button>
+                    </div>
+                </div>
+                <div class="lyrics-container">
+                    <div class="lyrics-header">Kaguya</div>
+                    <div class="lyrics-content">
+                        <div class="lyrics-line section-label">Estrofa 1:</div>
+                        <div class="lyrics-line">Entre las hojas asomó una luz</div>
+                        <div class="lyrics-line">En un pequeño tronco de bambú</div>
+                        <div class="lyrics-line">En su interior mis ojos se encontraron</div>
+                        <div class="lyrics-line">Con lo que no pudieron creer</div>
+                        <div class="lyrics-line">Sin duda fue por designio de un Dios</div>
+                        <div class="lyrics-line">Que tan humilde hombre hallara este don</div>
+                        <div class="lyrics-line">Honrados por tal regalo del cielo</div>
+                        <div class="lyrics-line">Te dimos techo, afecto y calor</div>
+                        <div class="lyrics-line">Quién soñara ser capaz de ver</div>
+                        <div class="lyrics-line">Tan hermoso y delicado ser</div>
+                        <div class="lyrics-line">Regresaste a nuestras vidas la felicidad</div>
+                        <div class="lyrics-line">Que tan pronto tuvimos que olvidar</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line section-label">Estribillo:</div>
+                        <div class="lyrics-line">Donde quiera que tu destino esté</div>
+                        <div class="lyrics-line">Nuestro amor te llevarás</div>
+                        <div class="lyrics-line">Solo esperaré que recuerdes este hogar</div>
+                        <div class="lyrics-line">Y cuando en la noche temprana hoy</div>
+                        <div class="lyrics-line">La luna se vuelva a alzar</div>
+                        <div class="lyrics-line">En su blanca luz podré verte una vez más</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line section-label">Estrofa 1:</div>
+                        <div class="lyrics-line">Pronto la niña que fueras ayer</div>
+                        <div class="lyrics-line">Se convirtió en la más bella mujer</div>
+                        <div class="lyrics-line">Pálida piel más suave que la seda</div>
+                        <div class="lyrics-line">Mirada más profunda que el mar</div>
+                        <div class="lyrics-line">Dispuesto a darte una vida mejor</div>
+                        <div class="lyrics-line">De los más nobles pedí tu elección</div>
+                        <div class="lyrics-line">Aunque todos lo intentaron ninguno</div>
+                        <div class="lyrics-line">Pudo llegar a tu corazón</div>
+                        <div class="lyrics-line">Todo lo que pude hacer por ti</div>
+                        <div class="lyrics-line">Solo fue por verte sonreír</div>
+                        <div class="lyrics-line">Aunque tu melancolía no logré curar</div>
+                        <div class="lyrics-line">Yo jamás quise dejarte marchar</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line section-label">Estribillo:</div>
+                        <div class="lyrics-line">Donde quiera que tu destino esté</div>
+                        <div class="lyrics-line">Nuestro amor te llevarás</div>
+                        <div class="lyrics-line">Solo esperaré que recuerdes este hogar</div>
+                        <div class="lyrics-line">Y cuando en la noche temprana hoy</div>
+                        <div class="lyrics-line">La luna se vuelva a alzar</div>
+                        <div class="lyrics-line">En su blanca luz podré verte una vez más</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line section-label">Puente:</div>
+                        <div class="lyrics-line">Oh, princesa, debes perdonar</div>
+                        <div class="lyrics-line">Los delirios de un pobre mortal</div>
+                        <div class="lyrics-line">Esta vida de grandezas no te pudo dar</div>
+                        <div class="lyrics-line">Lo que tú anhelabas en realidad</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line section-label">Estribillo:</div>
+                        <div class="lyrics-line">Donde quiera que tu destino esté</div>
+                        <div class="lyrics-line">Nuestro amor te llevarás</div>
+                        <div class="lyrics-line">Solo esperaré que recuerdes este hogar</div>
+                        <div class="lyrics-line">Y cuando en la noche temprana hoy</div>
+                        <div class="lyrics-line">La luna se vuelva a alzar</div>
+                        <div class="lyrics-line">En su blanca luz podré verte una vez más</div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section class="story-section" id="song-6">
+            <div class="background-parallax" style="background-image: url('images/song6_bg.jpg');" aria-hidden="true">
+            </div>
+            <div class="content-container">
+                <button class="dock-toggle-btn" title="Colapsa a la derecha"
+                    aria-label="Colapsar contenido de la Canción 6 - La Danza de los Muertos">
+                    <span class="dock-icon">→</span>
+                </button>
+                <div class="content-main">
+                    <h2>La Danza de los Muertos</h2>
+                    <p>Para este clásicazo de Ekyrian contamos con los cracks de <strong>Dark Fantasy FX</strong>, que
+                        se caracterizaron
+                        completamente como orcos aterrorizando la platea. <strong>Santos Martín</strong> (antiguo
+                        batería de Ekyrian) y su mujer <strong>Laura Rocha</strong>
+                        son parte de Dark Fantasy FX, asi que son parte de la familia también.
+                        En el 1:40 podréis ver a Krade pidiendo un tiempo muerto a los orcos &#128514 &#128514. Cuando
+                        los orcos invaden el escenario veréis a Nuria como
+                        protegiéndose, no es actuación, ¡Está intentando no dar a nadie con el arco del violín!</p>
+
+                    <div class="button-group">
+                        <button class="prev-btn" data-target="song-5" aria-label="Volver a la Canción 5 - Kaguya">←
+                            <span class="full-text">Canción Anterior</span><span
+                                class="short-text">Anterior</span></button>
+                        <button class="next-btn" data-target="song-7"
+                            aria-label="Ir a la Canción 7 - Colores en el Viento"><span class="full-text">Siguiente
+                                Canción</span><span class="short-text">Siguiente</span> →</button>
+                    </div>
+                </div>
+                <div class="lyrics-container">
+                    <div class="lyrics-header">La Danza de los Muertos</div>
+                    <div class="lyrics-content">
+                        <div class="lyrics-line section-label">Estrofa 1:</div>
+                        <div class="lyrics-line">Hace tiempo en un lugar</div>
+                        <div class="lyrics-line">alguien despertó,</div>
+                        <div class="lyrics-line">es el ángel del adiós</div>
+                        <div class="lyrics-line">quien invocará.</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">A los muertos reunirá</div>
+                        <div class="lyrics-line">en el ritual,</div>
+                        <div class="lyrics-line">es la hora de marchar</div>
+                        <div class="lyrics-line">sino morirás.</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line section-label">Puente:</div>
+                        <div class="lyrics-line">Se unen los muertos</div>
+                        <div class="lyrics-line">despacio en la penumbra,</div>
+                        <div class="lyrics-line">se oyen los pasos del mal.</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Cada cien años reviven</div>
+                        <div class="lyrics-line">sin mágia alguna,</div>
+                        <div class="lyrics-line">quieren volver a bailar.</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line section-label">Estrofa 2:</div>
+                        <div class="lyrics-line">Son las almas del ayer</div>
+                        <div class="lyrics-line">que quieren volver,</div>
+                        <div class="lyrics-line">son sus cuerpos quienes van</div>
+                        <div class="lyrics-line">a vivir en paz.</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Purifican su dolor</div>
+                        <div class="lyrics-line">juntos en su hogar,</div>
+                        <div class="lyrics-line">esqueletos del horror</div>
+                        <div class="lyrics-line">sólos bailaran.</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line section-label">Puente:</div>
+                        <div class="lyrics-line">Se unen los muertos</div>
+                        <div class="lyrics-line">despacio en la penumbra,</div>
+                        <div class="lyrics-line">se oyen los pasos del mal.</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Cada cien años reviven</div>
+                        <div class="lyrics-line">sin mágia alguna,</div>
+                        <div class="lyrics-line">quieren volver a bailar.</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line section-label">Estribillo:</div>
+                        <div class="lyrics-line">Es la Danza del más allá,</div>
+                        <div class="lyrics-line">y allí viajarán</div>
+                        <div class="lyrics-line">los recuerdos de años atrás,</div>
+                        <div class="lyrics-line">hasta regresar.</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Son los muertos que vagarán</div>
+                        <div class="lyrics-line">una noche más,</div>
+                        <div class="lyrics-line">si quieres venir a bailar</div>
+                        <div class="lyrics-line">no podrás marchar.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="story-section" id="song-7">
+            <div class="background-parallax" style="background-image: url('images/song7_bg.jpg');" aria-hidden="true">
+            </div>
+            <div class="content-container">
+                <button class="dock-toggle-btn" title="Colapsa a la derecha"
+                    aria-label="Colapsar contenido de la Canción 7 - Colores en el Viento">
+                    <span class="dock-icon">→</span>
+                </button>
+                <div class="content-main">
+                    <h2>Colores en el Viento</h2>
+                    <p><strong>Colores en el Viento</strong> es otro de los temas que no faltan en nuestros directos
+                        últimamente, es una
+                        gran adaptación que hizo
+                        <strong>Carlos Roldán</strong> (antiguo guitarra, pero sigue presente componiendo tremendos
+                        temardos), que
+                        lanzamos hace
+                        poco más de un año. Como fun fact,
+                        es la primera grabación de Ibai con <strong>Ekyrian</strong>.
+                        En el escenario veréis a una settñorita muy asettñorada caracterizada como un adorable
+                        champiñón, que iba repartiendo pequeñas settitas. Detrás de ella veréis a nuestro
+                        abnegado limpiacubiertas (David Pérez). Notaréis que David se parece bastante a Rob (nuestro
+                        bajista), y es que son hermanos mellizos! Atentos a los "lobos" en el estribillo, no tenemos
+                        claro si son más bien cachorros.
+                    </p>
+
+                    <div class="button-group">
+                        <button class="prev-btn" data-target="song-6"
+                            aria-label="Volver a la Canción 6 - La Danza de los Muertos">← <span
+                                class="full-text">Canción Anterior</span><span
+                                class="short-text">Anterior</span></button>
+                        <button class="next-btn" data-target="song-8"
+                            aria-label="Ir a la Canción 8 - El Cuento de la Oscuridad"><span class="full-text">Siguiente
+                                Canción</span><span class="short-text">Siguiente</span> →</button>
+                    </div>
+                </div>
+                <div class="lyrics-container">
+                    <div class="lyrics-header">Colores en el Viento</div>
+                    <div class="lyrics-content">
+                        <div class="lyrics-line section-label">Estrofa 1:</div>
+                        <div class="lyrics-line">Me ves ignorante y salvaje</div>
+                        <div class="lyrics-line">Y conoces mil lugares, quizás tengas razón</div>
+                        <div class="lyrics-line">Porque si es así, soy salvaje para ti</div>
+                        <div class="lyrics-line">No puedes abrir más tu corazón</div>
+                        <div class="lyrics-line">¡Corazón!</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line section-label">Estrofa 2:</div>
+                        <div class="lyrics-line">Tú crees que es tuyo todo lo que pisas</div>
+                        <div class="lyrics-line">Te adueñas de la tierra que tú ves</div>
+                        <div class="lyrics-line">Mas cada árbol, roca y criatura</div>
+                        <div class="lyrics-line">Tiene vida, tiene alma, es un ser</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Parece que no existen más personas</div>
+                        <div class="lyrics-line">Que aquellas que son igual que tú</div>
+                        <div class="lyrics-line">Si sigues las pisadas de un extraño</div>
+                        <div class="lyrics-line">Verás cosas que jamás soñaste ver</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line section-label">Estribillo:</div>
+                        <div class="lyrics-line">¿Has oído al lobo aullarle a la luna azul?</div>
+                        <div class="lyrics-line">¿Has visto a un lince sonreír?</div>
+                        <div class="lyrics-line">¿Has cantado con la voz de las montañas?</div>
+                        <div class="lyrics-line">Y colores en el viento descubrir</div>
+                        <div class="lyrics-line">Y colores en el viento descubrir</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line section-label">Estrofa 1:</div>
+                        <div class="lyrics-line">Corramos por las sendas de los bosques</div>
+                        <div class="lyrics-line">Probemos de los frutos su sabor</div>
+                        <div class="lyrics-line">Descubre la riqueza a tu alcance</div>
+                        <div class="lyrics-line">Sin dejar un instante su valor</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Los ríos y la lluvia, mis hermanos</div>
+                        <div class="lyrics-line">Amigos somos todos, ya lo ves</div>
+                        <div class="lyrics-line">Estamos entre todos unidos</div>
+                        <div class="lyrics-line">En un ciclo sin final que eterno es</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">¿Y cuán alto el árbol crecerá?</div>
+                        <div class="lyrics-line">Si no tocas su riz, nunca lo sabrás</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line section-label">Estribillo:</div>
+                        <div class="lyrics-line">Y no oirás al lobo aullarle a la luna azul</div>
+                        <div class="lyrics-line">No importará el color de nuestra piel</div>
+                        <div class="lyrics-line">Y uniremos nuestra voz con las montañas</div>
+                        <div class="lyrics-line">Y colores en el viento descubrir</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line section-label">Final:</div>
+                        <div class="lyrics-line">Si no entiendes qué hay aquí</div>
+                        <div class="lyrics-line">Sólo es tierra para ti</div>
+                        <div class="lyrics-line">Sin colores en el viento descubrir</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="story-section" id="song-8">
+            <div class="background-parallax" style="background-image: url('images/song8_bg.jpg');" aria-hidden="true">
+            </div>
+            <div class="content-container">
+                <button class="dock-toggle-btn" title="Colapsa a la derecha"
+                    aria-label="Colapsar contenido de la Canción 8 - El Cuento de la Oscuridad">
+                    <span class="dock-icon">→</span>
+                </button>
+                <div class="content-main">
+                    <h2>El Cuento de la Oscuridad</h2>
+                    <p>Este es un tema un poco atípico y que no solemos tocar, pero que tuvimos claro que queríamos que
+                        entrase en el sinfónico. Es una historia épica, que la orquesta eleva a un nivel espectacular.
+                        La iluminación es escasa en el escenario de manera intencionada, para enfatizar la historia, y
+                        tenemos a <strong>Luna y Tyr</strong> interpretando la historia de manera espectacular. Como
+                        bonus, os contamos que el hecho de que el público con velas subiese al escenario !No estaba
+                        previsto! Se metieron en el papel y acabaron subiendo al escenario, dando a la escena un
+                        dramatismo increíble.</p>
+
+                    <div class="button-group">
+                        <button class="prev-btn" data-target="song-7"
+                            aria-label="Volver a la Canción 7 - Colores en el Viento">← <span class="full-text">Canción
+                                Anterior</span><span class="short-text">Anterior</span></button>
+                        <button class="next-btn" data-target="song-9"
+                            aria-label="Ir a la Canción 9 - Volverte a Soñar"><span class="full-text">Siguiente
+                                Canción</span><span class="short-text">Siguiente</span> →</button>
+                    </div>
+                </div>
+                <div class="lyrics-container">
+                    <div class="lyrics-header">El Cuento de la Oscuridad</div>
+                    <div class="lyrics-content">
+                        <div class="lyrics-line">El miedo acecha en ese lugar.</div>
+                        <div class="lyrics-line">Negra es la noche, un manto de oscuridad.</div>
+                        <div class="lyrics-line">Hace ya mucho que la luz se fue,</div>
+                        <div class="lyrics-line">se la expulsó y no ha de volver.</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Un castigo fue por no socorrer</div>
+                        <div class="lyrics-line">a una bruja, que herida imploró</div>
+                        <div class="lyrics-line">refugiarse allí y poder sanar.</div>
+                        <div class="lyrics-line">Pero el pueblo con ella intentó acabar.</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Desesperado, un muchacho se alzó:</div>
+                        <div class="lyrics-line">"la mataré, romperé esta maldición".</div>
+                        <div class="lyrics-line">Con una espada, y un talismán,</div>
+                        <div class="lyrics-line">para cubrirse de ella y su mal.</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Pero la vio y le asaltó la duda,</div>
+                        <div class="lyrics-line">pues su belleza le impidió razonar.</div>
+                        <div class="lyrics-line">¿Y si fue el pueblo quien cometió un error</div>
+                        <div class="lyrics-line">por no ofrecerle su ayuda?</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Su voluntad ella vio quebrada,</div>
+                        <div class="lyrics-line">le sonrió y su juicio se nubló.</div>
+                        <div class="lyrics-line">El talismán su corazón no cubrió,</div>
+                        <div class="lyrics-line">de ella se enamoró.</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Ella le miró bien,</div>
+                        <div class="lyrics-line">no vio maldad en él,</div>
+                        <div class="lyrics-line">sólo valor y desesperación.</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Librar su pueblo al fin</div>
+                        <div class="lyrics-line">quería conseguir.</div>
+                        <div class="lyrics-line">Se apiadó y su amor prendió.</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">De aquel amor una luz brotó.</div>
+                        <div class="lyrics-line">Junto a la bruja, brillaron los dos.</div>
+                        <div class="lyrics-line">El pueblo la esperanza perdió,</div>
+                        <div class="lyrics-line">y al muchacho se desterró.</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Envidiosos, el pueblo se unió,</div>
+                        <div class="lyrics-line">para juntos su poder robar,</div>
+                        <div class="lyrics-line">y devolver la luz a ese lugar</div>
+                        <div class="lyrics-line">lleno de oscuridad.</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Se encaminaron armas en mano</div>
+                        <div class="lyrics-line">pero el joven ante ellos se plantó:</div>
+                        <div class="lyrics-line">"vuestro egoísmo fue castigado,</div>
+                        <div class="lyrics-line">¡no os dejaré que la hagáis daño!</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Sobre la bruja se abalanzaron,</div>
+                        <div class="lyrics-line">el joven con su cuerpo la protegió,</div>
+                        <div class="lyrics-line">y con sus últimas fuerzas dijo:</div>
+                        <div class="lyrics-line">"por favor, perdónalos".</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Desolada y cansada de luchar,</div>
+                        <div class="lyrics-line">su sacrificio otorgó al fin</div>
+                        <div class="lyrics-line">y cumplió su última voluntad:</div>
+                        <div class="lyrics-line">Los perdonó al morir.</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Cuando en las noches hay luna nueva</div>
+                        <div class="lyrics-line">es que la bruja se vuelve a sacrificar.</div>
+                        <div class="lyrics-line">Su luz concede a las estrellas</div>
+                        <div class="lyrics-line">para que solas puedan brillar.</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Tras muchos largos años de espera,</div>
+                        <div class="lyrics-line">el pueblo arrepentido pide el perdón,</div>
+                        <div class="lyrics-line">y como ofrenda en el cielo les juntan</div>
+                        <div class="lyrics-line">en un eclipse de Sol.</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Oohh... oohh...</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="story-section" id="song-9">
+            <div class="background-parallax" style="background-image: url('images/song9_bg.jpg');" aria-hidden="true">
+            </div>
+            <div class="content-container">
+                <button class="dock-toggle-btn" title="Colapsa a la derecha"
+                    aria-label="Colapsar contenido de la Canción 9 - Volverte a Soñar">
+                    <span class="dock-icon">→</span>
+                </button>
+                <div class="content-main">
+                    <h2>Volverte a Soñar</h2>
+                    <p>En Volverte a Soñar tuvimos momentos agridulces. Es una de las canciones donde mejor se puede
+                        apreciar la orquesta, sobre todo en la increíble intro que adaptaron <strong>Aitor y
+                            Miguel</strong>. La
+                        presentación de Aitor fue muy emotiva, y desde el escenario pudimos ver como os llegaba la
+                        canción y la cantábais muchísimo. Desafortunadamente, el ordenador que grababa el audio decidió
+                        tomarse un descanso, y aunque teníamos un backup planeado, no funcionó, así que lo que oís en la
+                        segunda estrofa es el audio de una de las cámaras que grababan el concierto. Dudamos mucho si
+                        incluir la canción o no, pero pensamos que antes que trampear o quitar la canción era mejor
+                        dejar lo que teníamos. !Lo sentimos mucho!</p>
+
+                    <div class="button-group">
+                        <button class="prev-btn" data-target="song-8"
+                            aria-label="Volver a la Canción 8 - El Cuento de la Oscuridad">← <span
+                                class="full-text">Canción Anterior</span><span
+                                class="short-text">Anterior</span></button>
+                        <button class="next-btn" data-target="song-10"
+                            aria-label="Ir a la Canción 10 - El Alquimista"><span class="full-text">Siguiente
+                                Canción</span><span class="short-text">Siguiente</span> →</button>
+                    </div>
+                </div>
+                <div class="lyrics-container">
+                    <div class="lyrics-header">Volverte a Soñar</div>
+                    <div class="lyrics-content">
+                        <div class="lyrics-line section-label">Estrofa 1:</div>
+                        <div class="lyrics-line">Dicen que el tiempo es capaz</div>
+                        <div class="lyrics-line">De curar cualquier herida</div>
+                        <div class="lyrics-line">Llaman sanar a ignorar</div>
+                        <div class="lyrics-line">Y olvidar por quién sufrías</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Mi herida aún sangra al recordar</div>
+                        <div class="lyrics-line">El polen mis manos tintar</div>
+                        <div class="lyrics-line">Un cielo partido en dos</div>
+                        <div class="lyrics-line">Y la lluvia empapando el cristal</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line section-label">Estrofa 2:</div>
+                        <div class="lyrics-line">El tiempo que te tocó</div>
+                        <div class="lyrics-line">No arrancó ni media queja</div>
+                        <div class="lyrics-line">Siempre una mano tendida</div>
+                        <div class="lyrics-line">Y sonrisa de oreja a oreja</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Me fui pensando en volverte a ver</div>
+                        <div class="lyrics-line">Y no me llegué a despedir</div>
+                        <div class="lyrics-line">¿Qué hubiera dicho al saber</div>
+                        <div class="lyrics-line">Que ya nunca estarás junto a mí?</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Estribillo:</div>
+                        <div class="lyrics-line">Hoy te soñé otra vez, volvimos a hablar</div>
+                        <div class="lyrics-line">Lágrimas quedaron al despertar</div>
+                        <div class="lyrics-line">Pero me alegra sentir</div>
+                        <div class="lyrics-line">Que aún sigues viva en mí</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line section-label">Estrofa 3:</div>
+                        <div class="lyrics-line">Partí en mi mente a buscar</div>
+                        <div class="lyrics-line">Más allá de los tristes recuerdos</div>
+                        <div class="lyrics-line">Para tratar de encontrar</div>
+                        <div class="lyrics-line">En mi infancia tus sabios consejos</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">¿Por qué no me pude preparar</div>
+                        <div class="lyrics-line">Sabiendo que se iba a acabar</div>
+                        <div class="lyrics-line">Toda la vida para amar</div>
+                        <div class="lyrics-line">Y nos falta un minuto al final</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Estribillo:</div>
+                        <div class="lyrics-line">Hoy te soñé otra vez, volvimos a hablar</div>
+                        <div class="lyrics-line">Lágrimas quedaron al despertar</div>
+                        <div class="lyrics-line">Pero me alegra sentir</div>
+                        <div class="lyrics-line">Que aún sigues viva en mí</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Hoy te soñé otra vez, volvimos a hablar</div>
+                        <div class="lyrics-line">Lágrimas quedaron al despertar</div>
+                        <div class="lyrics-line">Pero me alegra sentir</div>
+                        <div class="lyrics-line">Que aún sigues viva en mí</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Hoy te soñé otra vez, volvimos a hablar</div>
+                        <div class="lyrics-line">Lágrimas quedaron al despertar</div>
+                        <div class="lyrics-line">Pero me alegra sentir</div>
+                        <div class="lyrics-line">Que aún sigues viva en mí</div>
+                        <div class="lyrics-line">Que aún sigues viva en mí</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="story-section" id="song-10">
+            <div class="background-parallax" style="background-image: url('images/song10_bg.jpg');" aria-hidden="true">
+            </div>
+            <div class="content-container">
+                <button class="dock-toggle-btn" title="Colapsa a la derecha"
+                    aria-label="Colapsar contenido de la Canción 10 - El Alquimista">
+                    <span class="dock-icon">→</span>
+                </button>
+                <div class="content-main">
+                    <h2>El Alquimista</h2>
+                    <p>Para la intro del Alquimista tuvimos el placer de contar con <strong>Mariano</strong>, que toca
+                        también en la orquesta, y que hizo un grandísimo papel interpretando a "Gandel Dore" &#129300;
+                        hablándonos sobre <strong>Las Diez Leyes de la Alquimia</strong>. Aquí recuperamos el audio al
+                        principio del discurso (gracias a <strong>Juanjo de Esta Por Ver!</strong>), y como fun fact os
+                        contamos que
+                        Mariano repite varias veces "Las 10 Leyes de la Alquimia" porque en la primera Miguel debía
+                        entrar con el órgano y estaba en la parra &#128514;&#128514;. Aquí la orquesta se toma un
+                        descanso, nos pidieron que hubiera algún break en el set list para poder descansar un poco, y se
+                        les ven algunas caras de "madre mía dónde nos hemos metido". Ojo a Nuria cambiando entre gaita y
+                        violín, !Menuda crack!</p>
+
+                    <div class="button-group">
+                        <button class="prev-btn" data-target="song-9"
+                            aria-label="Volver a la Canción 9 - Volverte a Soñar">← <span class="full-text">Canción
+                                Anterior</span><span class="short-text">Anterior</span></button>
+                        <button class="next-btn" data-target="song-11"
+                            aria-label="Ir a la Canción 11 - El Alma del Viento"><span class="full-text">Siguiente
+                                Canción</span><span class="short-text">Siguiente</span> →</button>
+                    </div>
+                </div>
+                <div class="lyrics-container">
+                    <div class="lyrics-header">El Alquimista</div>
+                    <div class="lyrics-content">
+                        <div class="lyrics-line section-label">Estrofa 1:</div>
+                        <div class="lyrics-line">La niebla se propaga bajo el solsticio</div>
+                        <div class="lyrics-line">Las calles se oscurecen en el camino</div>
+                        <div class="lyrics-line">Bajo el cielo se hace contemplar</div>
+                        <div class="lyrics-line">Un cometa centenario</div>
+                        <div class="lyrics-line">Y un eclipse, que se unirán</div>
+                        <div class="lyrics-line">Hoy la profecía llegará</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Hay un libro que esconde</div>
+                        <div class="lyrics-line">Un singular retrato</div>
+                        <div class="lyrics-line">Donde el abismo nace</div>
+                        <div class="lyrics-line">Cuando duerme el sol</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Estribillo:</div>
+                        <div class="lyrics-line">Magia, conjuros, soy el guardián</div>
+                        <div class="lyrics-line">De libros ocultos en la oscuridad</div>
+                        <div class="lyrics-line">Hay pergaminos que te mostrarán</div>
+                        <div class="lyrics-line">Rumbos perdidos que deberás tomar</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line section-label">Estrofa 1:</div>
+                        <div class="lyrics-line">Hace ya muchos siglos surgió una piedra</div>
+                        <div class="lyrics-line">Que al poseerla daba la vida eterna</div>
+                        <div class="lyrics-line">Hoy los astros lo harán regresar</div>
+                        <div class="lyrics-line">Con la ayuda de un hechizo</div>
+                        <div class="lyrics-line">Convocados en el ritual</div>
+                        <div class="lyrics-line">Forjaremos nuestro renacer</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Cada doscientos años</div>
+                        <div class="lyrics-line">Vuelve la profecía</div>
+                        <div class="lyrics-line">En el momento exacto</div>
+                        <div class="lyrics-line">De la luz lunar</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Estribillo:</div>
+                        <div class="lyrics-line">Magia, conjuros, soy el guardián</div>
+                        <div class="lyrics-line">De libros ocultos en la oscuridad</div>
+                        <div class="lyrics-line">Hay pergaminos que te mostrarán</div>
+                        <div class="lyrics-line">Rumbos perdidos que deberás tomar</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line section-label">Puente:</div>
+                        <div class="lyrics-line">Una reliquia antigua</div>
+                        <div class="lyrics-line">Que con alquimia forjan</div>
+                        <div class="lyrics-line">Pero sólo los sabios</div>
+                        <div class="lyrics-line">Lo podrán crear</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Estribillo:</div>
+                        <div class="lyrics-line">Magia, conjuros, soy el guardián</div>
+                        <div class="lyrics-line">De libros ocultos en la oscuridad</div>
+                        <div class="lyrics-line">Hay pergaminos que te mostrarán</div>
+                        <div class="lyrics-line">Rumbos perdidos que deberás tomar</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="story-section" id="song-11">
+            <div class="background-parallax" style="background-image: url('images/song11_bg.jpg');" aria-hidden="true">
+            </div>
+            <div class="content-container">
+                <button class="dock-toggle-btn" title="Colapsa a la derecha"
+                    aria-label="Colapsar contenido de la Canción 11 - El Alma del Viento">
+                    <span class="dock-icon">→</span>
+                </button>
+                <div class="content-main">
+                    <h2>El Alma del Viento</h2>
+                    <p>Para esta pieza instrumental que queríamos recuperar, grabamos una intro narrada por Ibai, y el
+                        piano que lo acompaña no estaba planeado. <strong>Álex</strong>, el chico que acompañana la
+                        narración con el piano, es uno de los
+                        violinistas de la orquesta. El día anterior al concierto, en el ensayo general le oimos tocar el
+                        piano y alucinamos, y le preguntamos si quería improvisar algo con la narración. Dijo que
+                        palante, y por eso si os fijáis veréis a Ibai que está al lado del piano para decirle cuando
+                        parar. ¡No había partitura ni conocía el tema! ¿Menudo pasote la orquesta en este tema verdad?
+                    </p>
+
+                    <div class="button-group">
+                        <button class="prev-btn" data-target="song-10"
+                            aria-label="Volver a la Canción 10 - El Alquimista">← <span class="full-text">Canción
+                                Anterior</span><span class="short-text">Anterior</span></button>
+                        <button class="next-btn" data-target="song-12"
+                            aria-label="Ir a la Canción 12 - El Aprendiz"><span class="full-text">Siguiente
+                                Canción</span><span class="short-text">Siguiente</span> →</button>
+                    </div>
+                </div>
+                <div class="lyrics-container">
+                    <div class="lyrics-header">El Alma del Viento</div>
+                    <div class="lyrics-content">
+                        <div class="lyrics-line">[INSTRUMENTAL - No tiene letra]</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="story-section" id="song-12">
+            <div class="background-parallax" style="background-image: url('images/song12_bg.jpg');" aria-hidden="true">
+            </div>
+            <div class="content-container">
+                <button class="dock-toggle-btn" title="Colapsa a la derecha"
+                    aria-label="Colapsar contenido de la Canción 12 - El Aprendiz">
+                    <span class="dock-icon">→</span>
+                </button>
+                <div class="content-main">
+                    <h2>El Aprendiz</h2>
+                    <p>¡Otro pepinazo! En esta canción lo tenemos todo, Jorge empezando desde la platea (nadie le ha
+                        dicho a este chico que los micros delante de los altavoces se acoplan, por eso no se le oye al
+                        principio, era nuestro técnico <strong>Borja Bueno</strong> salvando los oídos del público), y a
+                        los grandes <strong>Versus Madrid</strong> de nuevo prestándonos su increíble talento con una
+                        coreografía impresionante. Viendo la coreografía, ¿Sabríais decirnos de que habla la canción?
+                        Tambíen podréis ver a unos colaboradores imprescindibles para nosotros <strong>Tris Rosa de
+                            Elephant Room Films</strong> (cuando Jorge canta "a su maestro") e <strong>Ismael Rodríguez
+                            (Starlax)</strong> (en el segundo solo de Fran).</p>
+                    <div class="button-group">
+                        <button class="prev-btn" data-target="song-11"
+                            aria-label="Volver a la Canción 11 - El Alma del Viento">← <span class="full-text">Canción
+                                Anterior</span><span class="short-text">Anterior</span></button>
+                        <button class="next-btn" data-target="song-13"
+                            aria-label="Ir a la Canción 13 - La Travesía del Navegante"><span
+                                class="full-text">Siguiente Canción</span><span class="short-text">Siguiente</span>
+                            →</button>
+                    </div>
+                </div>
+                <div class="lyrics-container">
+                    <div class="lyrics-header">El Aprendiz</div>
+                    <div class="lyrics-content">
+                        <div class="lyrics-line section-label">Estrofa 1:</div>
+                        <div class="lyrics-line">Fue el destino quien le trajo un aliado</div>
+                        <div class="lyrics-line">Con poder para seguir su legado</div>
+                        <div class="lyrics-line">Su ambición y fuerza siempre hubo ocultado</div>
+                        <div class="lyrics-line">Su maldad está por revelar</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Cuando se enfrentó al dolor y a la muerte</div>
+                        <div class="lyrics-line">Ningún reto le hizo dudar</div>
+                        <div class="lyrics-line">Entregó su sino y su suerte</div>
+                        <div class="lyrics-line">A su maestro</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Estribillo:</div>
+                        <div class="lyrics-line">Gloria y poder cobijados en el alma</div>
+                        <div class="lyrics-line">Alimentan su fe en la ira y el odio</div>
+                        <div class="lyrics-line">Muerte y placer a diferenciar no alcanza</div>
+                        <div class="lyrics-line">Solo rabia y desdén guarda en el fondo</div>
+                        <div class="lyrics-line">Del corazón</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line section-label">Estrofa 1:</div>
+                        <div class="lyrics-line">Para hacerse fuerte no perdió un momento</div>
+                        <div class="lyrics-line">Bajo la alta sombra de su maestro</div>
+                        <div class="lyrics-line">Sangre y sufrimiento fue su entrenamiento</div>
+                        <div class="lyrics-line">Olvidó la paz y la piedad</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Pronto decidió que su propio camino</div>
+                        <div class="lyrics-line">Solamente él lo iba a marcar</div>
+                        <div class="lyrics-line">Abrazó sin dudar su destino</div>
+                        <div class="lyrics-line">Traición y engaño</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Estribillo:</div>
+                        <div class="lyrics-line">Gloria y poder cobijados en el alma</div>
+                        <div class="lyrics-line">Alimentan su fe en la ira y el odio</div>
+                        <div class="lyrics-line">Muerte y placer a diferenciar no alcanza</div>
+                        <div class="lyrics-line">Solo rabia y desdén guarda en el fondo</div>
+                        <div class="lyrics-line">Del corazón</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line section-label">Puente:</div>
+                        <div class="lyrics-line">La noche llegó y ejecutó su venganza al fin</div>
+                        <div class="lyrics-line">Nunca más a nadie volvió a servir</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Estribillo:</div>
+                        <div class="lyrics-line">Gloria y poder cobijados en el alma</div>
+                        <div class="lyrics-line">Alimentan su fe en la ira y el odio</div>
+                        <div class="lyrics-line">Muerte y placer a diferenciar no alcanza</div>
+                        <div class="lyrics-line">Solo rabia y desdén guarda en el fondo</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Gloria y poder cobijados en el alma</div>
+                        <div class="lyrics-line">Alimentan su fe en la ira y el odio</div>
+                        <div class="lyrics-line">Muerte y placer a diferenciar no alcanza</div>
+                        <div class="lyrics-line">Solo rabia y desdén guarda en el fondo</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Gloria y poder cobijados en el alma</div>
+                        <div class="lyrics-line">Alimentan su fe en la ira y el odio</div>
+                        <div class="lyrics-line">Muerte y placer a diferenciar no alcanza</div>
+                        <div class="lyrics-line">Solo rabia y desdén guarda en el corazón</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="story-section" id="song-13">
+            <div class="background-parallax" style="background-image: url('images/song13_bg.jpg');" aria-hidden="true">
+            </div>
+            <div class="content-container">
+                <button class="dock-toggle-btn" title="Colapsa a la derecha"
+                    aria-label="Colapsar contenido de la Canción 13 - La Travesía del Navegante">
+                    <span class="dock-icon">→</span>
+                </button>
+                <div class="content-main">
+                    <h2>La Travesía del Navegante</h2>
+                    <p>En este clasicazo de Mas Allá de la Tempestad que no falta en nuestro repertorio, veréis a Rob
+                        desaparecido, ¡Y es que se fue a dar una vuelta por el público! Este chico no para quieto.
+                        En este tema la orquesta hace un trabajo fantástico, y mención especial a
+                        <strong>Yolanda</strong>, que toca el <a href="https://es.wikipedia.org/wiki/Glockenspiel"
+                            target="_blank">Glockenspiel</a>. Uno de los grandes lujos de tocar con una orquesta es
+                        poder tener acceso a instrumentos que
+                        de otra manera estarían tocados de manera digital (a través del teclado). Prestad atención al
+                        final de la canción y veréis a Yolanda en el extremo derecho de la pantalla tocando el
+                        <strong>Glockenspiel</strong>. ¡Increíble!
+                    </p>
+                    <div class="button-group">
+                        <button class="prev-btn" data-target="song-12"
+                            aria-label="Volver a la Canción 12 - El Aprendiz">← <span class="full-text">Canción
+                                Anterior</span><span class="short-text">Anterior</span></button>
+                        <button class="next-btn" data-target="song-14" aria-label="Ir a la Canción 14 - Ítaca"><span
+                                class="full-text">Siguiente Canción</span><span class="short-text">Siguiente</span>
+                            →</button>
+                    </div>
+                </div>
+                <div class="lyrics-container">
+                    <div class="lyrics-header">Letra</div>
+                    <div class="lyrics-content">
+                        <div class="lyrics-line">Bienvenidos a la mar,</div>
+                        <div class="lyrics-line">ahora es tiempo de abordaje,</div>
+                        <div class="lyrics-line">de temer la noche</div>
+                        <div class="lyrics-line">y rezar porque salga el sol.</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">La bandera es la señal</div>
+                        <div class="lyrics-line">para el enemigo y el ataque,</div>
+                        <div class="lyrics-line">la conquista es la pasión</div>
+                        <div class="lyrics-line">y el ron nuestro gran amor.</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line section-label">Estribillo:</div>
+                        <div class="lyrics-line">Al navegar sin dirección,</div>
+                        <div class="lyrics-line">jamás lograrás escapar</div>
+                        <div class="lyrics-line">de este mar sin final.</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Para salir de este lugar</div>
+                        <div class="lyrics-line">primero has de luchar y ser inmortal.</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Con el viento marcharás</div>
+                        <div class="lyrics-line">donde marque el horizonte</div>
+                        <div class="lyrics-line">la luna te atrapará</div>
+                        <div class="lyrics-line">en noches de dolor.</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Calaveras para honrar</div>
+                        <div class="lyrics-line">las batallas que ganamos juntos,</div>
+                        <div class="lyrics-line">con las olas este mar</div>
+                        <div class="lyrics-line">surcaremos tú y yo.</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line section-label">Estribillo:</div>
+                        <div class="lyrics-line">Al navegar sin dirección,</div>
+                        <div class="lyrics-line">jamás lograrás escapar</div>
+                        <div class="lyrics-line">de este mar sin final.</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Para salir de este lugar</div>
+                        <div class="lyrics-line">primero has de luchar y ser inmortal.</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line section-label">Puente:</div>
+                        <div class="lyrics-line">Donde las penas brindan al cielo</div>
+                        <div class="lyrics-line">donde es el mar quien no tiene miedo,</div>
+                        <div class="lyrics-line">duerme surcando, vive luchando,</div>
+                        <div class="lyrics-line">seca tus llantos a la luz del sol.</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Donde el destino es nuestro camino</div>
+                        <div class="lyrics-line">surcando mares que estén prohibidos</div>
+                        <div class="lyrics-line">hasta encontrarte y nunca soltarte,</div>
+                        <div class="lyrics-line">la libertad eres tú mi amor.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="story-section" id="song-14">
+            <div class="background-parallax" style="background-image: url('images/song14_bg.jpg');" aria-hidden="true">
+            </div>
+            <div class="content-container">
+                <button class="dock-toggle-btn" title="Colapsa a la derecha"
+                    aria-label="Colapsar contenido de la Canción 14 - El Templo del Mar">
+                    <span class="dock-icon">→</span>
+                </button>
+                <div class="content-main">
+                    <h2>El Templo del Mar</h2>
+                    <p>El Templo del Mar (o "del Bar" como la llamamos coloquialmente a veces) es otro temazo
+                        imprescindible de <strong>Cuentos Junto a la Hoguera</strong>, y que la verdad
+                        tocamos menos de lo que nos gustaría. Aquí de nuevo podemos darnos el lujo de tocar con un
+                        auténtico piano de cola de tamaño completo, que nuestro teclas <strong>Miguel</strong> hace
+                        sonar
+                        increíblemente bien con sus expertas manos. De nuevo destacar la increíble iluminación a cargo
+                        de <strong>Noa Zabaleta</strong>.</p>
+
+                    <div class="button-group">
+                        <button class="prev-btn" data-target="song-13"
+                            aria-label="Volver a la Canción 13 - La Travesía del Navegante">← <span
+                                class="full-text">Canción Anterior</span><span
+                                class="short-text">Anterior</span></button>
+                        <button class="next-btn" data-target="song-15"
+                            aria-label="Ir a la Canción 15 - Rutas Misteriosas"><span class="full-text">Siguiente
+                                Canción</span><span class="short-text">Siguiente</span>
+                            →</button>
+                    </div>
+                </div>
+                <div class="lyrics-container">
+                    <div class="lyrics-header">Letra</div>
+                    <div class="lyrics-content">
+                        <div class="lyrics-line">La brisa junto al mar</div>
+                        <div class="lyrics-line">El oleaje que los cuervos</div>
+                        <div class="lyrics-line">Escuchan al despertar</div>
+                        <div class="lyrics-line">El templo les dará</div>
+                        <div class="lyrics-line">Cobijo y aposentos</div>
+                        <div class="lyrics-line">Para que ejerzan su reinar</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Se ve una luz en la inmensa tempestad</div>
+                        <div class="lyrics-line">Donde las nubes unen agua y cielo</div>
+                        <div class="lyrics-line">Sobre la costa un bote se hace divisar</div>
+                        <div class="lyrics-line">Bajo las sombras del temporal</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Desde la torre más alta del lugar</div>
+                        <div class="lyrics-line">Ojos clavados en esa presencia</div>
+                        <div class="lyrics-line">Un agrio olor se propaga sin contemplación</div>
+                        <div class="lyrics-line">La oscura esencia de la verdad</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Con la llegada de un nuevo alma</div>
+                        <div class="lyrics-line">Se abre el portón una vez más</div>
+                        <div class="lyrics-line">Lúgubres sueños que los emanan</div>
+                        <div class="lyrics-line">De toda realidad</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Estribillo:</div>
+                        <div class="lyrics-line">Busca la luz que alumbre tu mirada</div>
+                        <div class="lyrics-line">Y encuentre un porqué lejos de aquí</div>
+                        <div class="lyrics-line">Has de volar y contemplar la calma</div>
+                        <div class="lyrics-line">El templo del mar será parte de ti</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Un espejismo se suele dibujar</div>
+                        <div class="lyrics-line">En un abismo de cientos de estrellas</div>
+                        <div class="lyrics-line">De todo el daño que hicieron propagando el mal</div>
+                        <div class="lyrics-line">Para lucrar vuestra falsedad</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Ahora ellos viven encarcelados</div>
+                        <div class="lyrics-line">Y condenados en el mar</div>
+                        <div class="lyrics-line">Se han transformado como castigo</div>
+                        <div class="lyrics-line">Hasta la eternidad</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Estribillo:</div>
+                        <div class="lyrics-line">Busca la luz que alumbre tu mirada</div>
+                        <div class="lyrics-line">Y encuentre un porqué lejos de aquí</div>
+                        <div class="lyrics-line">Has de volar y contemplar la calma</div>
+                        <div class="lyrics-line">El templo del mar será parte de ti</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Busca la luz que alumbre tu mirada</div>
+                        <div class="lyrics-line">Y encuentre un porqué lejos de aquí</div>
+                        <div class="lyrics-line">Has de volar y contemplar la calma</div>
+                        <div class="lyrics-line">El templo del mar será parte de ti</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="story-section" id="song-15">
+            <div class="background-parallax" style="background-image: url('images/song15_bg.jpg');" aria-hidden="true">
+            </div>
+            <div class="content-container">
+                <button class="dock-toggle-btn" title="Colapsa a la derecha"
+                    aria-label="Colapsar contenido de la Canción 15 - Rutas Misteriosas">
+                    <span class="dock-icon">→</span>
+                </button>
+                <div class="content-main">
+                    <h2>Rutas Misteriosas</h2>
+                    <p>Este corte, que apareció en Más Allá de la Tempestad, es un tema completamente instrumental. Una
+                        de las cosas que queríamos hacer con el Sinfónico
+                        era buscar temas donde la orquesta pudiese brillar, y este es uno de los que desde el principio
+                        supimos que queríamos incluir. La orquesta suena de maravilla,
+                        y tenéis que saber que no fue fácil para ellos, ya que no están acostumbrados a tener una banda
+                        de metal tronando en su escenario. ¡Hicieron un trabajo fantástico,
+                        y que este tema sonase épico!
+                    </p>
+                    <div class="button-group">
+                        <button class="prev-btn" data-target="song-14"
+                            aria-label="Volver a la Canción 14 - El Templo del Mar">←
+                            <span class="full-text">Canción Anterior</span><span
+                                class="short-text">Anterior</span></button>
+                        <button class="next-btn" data-target="song-16" aria-label="Ir a la Canción 16 - Ítaca"><span
+                                class="full-text">Siguiente
+                                Canción</span><span class="short-text">Siguiente</span> →</button>
+                    </div>
+                </div>
+                <div class="lyrics-container">
+                    <div class="lyrics-header">Instrumental</div>
+                    <div class="lyrics-content">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="story-section" id="song-16">
+            <div class="background-parallax" style="background-image: url('images/song16_bg.jpg');" aria-hidden="true">
+            </div>
+            <div class="content-container">
+                <button class="dock-toggle-btn" title="Colapsa a la derecha"
+                    aria-label="Colapsar contenido de la Canción 16 - Ítaca">
+                    <span class="dock-icon">→</span>
+                </button>
+                <div class="content-main">
+                    <h2>Ítaca</h2>
+                    <p>¡Menudo abordaje que nos hacen este tema! <strong>Clara Palomares</strong>, nuestra Cartógrafa
+                        favorita, la polizona más rufiana de los 7 mares se trae a todo un Batallón de Gaitas
+                        para elevar Ítaca al Olimpo de los dioses. Como sabéis Clara abandonó el barco de Ekyrian (no
+                        diremos que como las ratas porque está feo), pero sigue siendo "parte del barco, parte de la
+                        tripulación",
+                        y siempre que ella quiera tendrá hueco en cubierta. Es un lujazo para nosotros contar con amigos
+                        así, muchas gracias a <strong>Clara, David, Álex, Martín y Elvira.</strong> Por cierto que
+                        Elvira fue otra persona crucial
+                        para Ekyrian en 2024, ya que vino a ayudarnos con la gaita y whistles a el Milagre Metaleiro
+                        &#128149;.
+                    </p>
+                    <div class="button-group">
+                        <button class="prev-btn" data-target="song-15"
+                            aria-label="Volver a la Canción 15 - Rutas Misteriosas">← <span class="full-text">Canción
+                                Anterior</span><span class="short-text">Anterior</span></button>
+                        <button class="next-btn" data-target="song-17"
+                            aria-label="Ir a la Canción 17 - La Balada de Wilfred el Enano"><span
+                                class="full-text">Siguiente
+                                Canción</span><span class="short-text">Siguiente</span> →</button>
+                    </div>
+                </div>
+                <div class="lyrics-container">
+                    <div class="lyrics-header">Letra</div>
+                    <div class="lyrics-content">
+
+                        <div class="lyrics-line">Largo tiempo hace ya que abandoné mi hogar</div>
+                        <div class="lyrics-line">Cumplir con mi deber me hizo partir de allí</div>
+                        <div class="lyrics-line">Con ingenio luché y a Troya engañé</div>
+                        <div class="lyrics-line">Cumpliré mi promesa al fin</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Surco el mar para verte una vez más</div>
+                        <div class="lyrics-line">Nada podrá evitar que regrese a tus brazos</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Estribillo:</div>
+                        <div class="lyrics-line">Quiero regresar a la vida que dejé atrás</div>
+                        <div class="lyrics-line">Beber junto a los míos, y poder</div>
+                        <div class="lyrics-line">Besarte una vez más, tumbarme en tu regazo y soñar</div>
+                        <div class="lyrics-line">Que siempre junto a ti me voy a quedar</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Gran error cometí al enfadar a un Dios</div>
+                        <div class="lyrics-line">Poseidón tratará de impedirme zarpar</div>
+                        <div class="lyrics-line">Al cegar a su hijo su furia desaté</div>
+                        <div class="lyrics-line">¡Sufrirás el terror del mar!</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Siento que tardé tanto en volver</div>
+                        <div class="lyrics-line">De sirenas escapé, pero mi mente nublaron</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Estribillo:</div>
+                        <div class="lyrics-line">Quiero regresar a la vida que dejé atrás</div>
+                        <div class="lyrics-line">Beber junto a los míos y poder</div>
+                        <div class="lyrics-line">Besarte una vez más, tumbarme en tu regazo y soñar</div>
+                        <div class="lyrics-line">Que siempre junto a ti me voy a quedar</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Largo tiempo fue, mi rostro no consigues recordar</div>
+                        <div class="lyrics-line">Vestido de mendigo trato de</div>
+                        <div class="lyrics-line">Volverte a enamorar, con tus pretendientes acabar</div>
+                        <div class="lyrics-line">Mi última batalla, antes de</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Recobrar mi hogar, por tu mano hoy debo luchar</div>
+                        <div class="lyrics-line">Tras tantos años nunca perdiste la</div>
+                        <div class="lyrics-line">Esperanza de que, al fin, estaba cerca el día en que</div>
+                        <div class="lyrics-line">Ítaca volviera a ver a su rey</div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="story-section" id="song-17">
+            <div class="background-parallax" style="background-image: url('images/song17_bg.jpg');" aria-hidden="true">
+            </div>
+            <div class="content-container">
+                <button class="dock-toggle-btn" title="Colapsa a la derecha"
+                    aria-label="Colapsar contenido de la Canción 17 - La Balada de Wilfred el Enano">
+                    <span class="dock-icon">→</span>
+                </button>
+                <div class="content-main">
+                    <h2>La Balada de Wilfred el Enano</h2>
+                    <p>A estas alturas del show, la fiesta era total. Este tema, con la presencia de la orquesta, y
+                        acompañándonos la gran <strong>Celica Soldream</strong>, cobra una nueva dimensión.
+                        Fue la primera vez que hemos podido compartir escenario con Celica y es un verdadero privilegio
+                        contar con su talento. Además, la fuerza y el buen rollo que le imprime Clara cada vez que se
+                        sube a un escenario con Ekyrian, queda patente en este tema.</p>
+
+                    <div class="button-group">
+                        <button class="prev-btn" data-target="song-16" aria-label="Volver a la Canción 16 - Ítaca">←
+                            <span class="full-text">Canción
+                                Anterior</span><span class="short-text">Anterior</span></button>
+                        <button class="next-btn" data-target="song-18"
+                            aria-label="Ir a la Canción 18 - El Rey Blanco"><span class="full-text">Siguiente
+                                Canción</span><span class="short-text">Siguiente</span> →</button>
+                    </div>
+                </div>
+                <div class="lyrics-container">
+                    <div class="lyrics-header">Letra</div>
+                    <div class="lyrics-content">
+                        <div class="lyrics-line">Cuentan que vivió</div>
+                        <div class="lyrics-line">Hace no mucho tiempo un tenaz marinero</div>
+                        <div class="lyrics-line">Aunque bravo y fiel</div>
+                        <div class="lyrics-line">Levantaba del suelo solo tres pies</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Siempre ansió mostrar</div>
+                        <div class="lyrics-line">Su destreza y coraje ante sus compañeros</div>
+                        <div class="lyrics-line">Pero es duro hallar</div>
+                        <div class="lyrics-line">Su respeto si no les llegas ni al pecho</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Un día oyó contar</div>
+                        <div class="lyrics-line">La leyenda de un oráculo ya perdido</div>
+                        <div class="lyrics-line">Con la facultad</div>
+                        <div class="lyrics-line">De cualquier voluntad hacer realidad</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">"Yo seré quién lo encuentre"- dijo</div>
+                        <div class="lyrics-line">A la tripulación</div>
+                        <div class="lyrics-line">Mientras ellos rieron</div>
+                        <div class="lyrics-line">Él cantó a viva voz</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Estribillo:</div>
+                        <div class="lyrics-line">"Sé que un día veré desaparecer</div>
+                        <div class="lyrics-line">La luz de mi mala estrella</div>
+                        <div class="lyrics-line">Cambiará mi fortuna al fin</div>
+                        <div class="lyrics-line">El sol saldrá por mí</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Aunque deba perder la vida, lo haré</div>
+                        <div class="lyrics-line">Removeré cielo y tierra</div>
+                        <div class="lyrics-line">Para hallar lo que nadie ve</div>
+                        <div class="lyrics-line">Y yo siempre busqué."</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Desde que escuchó aquella vieja historia</div>
+                        <div class="lyrics-line">Soñó con ver cumplido</div>
+                        <div class="lyrics-line">Su deseo de</div>
+                        <div class="lyrics-line">Ser el hombre más alto que hubo jamás</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">No dudó en marchar</div>
+                        <div class="lyrics-line">Y enfrentarse a tormentas, tempestad, sed y hambre</div>
+                        <div class="lyrics-line">Por montaña y mar</div>
+                        <div class="lyrics-line">Hasta donde antes nadie pudo llegar</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">En la cumbre más alta y fría</div>
+                        <div class="lyrics-line">Fue donde lo encontró</div>
+                        <div class="lyrics-line">Y entre roca y ventisca</div>
+                        <div class="lyrics-line">Resonó su canción</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Estribillo:</div>
+                        <div class="lyrics-line">"Sé que un día veré desaparecer</div>
+                        <div class="lyrics-line">La luz de mi mala estrella</div>
+                        <div class="lyrics-line">Cambiará mi fortuna al fin</div>
+                        <div class="lyrics-line">El sol saldrá por mí</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Aunque deba perder la vida, lo haré</div>
+                        <div class="lyrics-line">Removeré cielo y tierra</div>
+                        <div class="lyrics-line">Para hallar lo que nadie ve</div>
+                        <div class="lyrics-line">Y yo siempre busqué."</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">"Sé lo que anhelas desde lo más profundo,</div>
+                        <div class="lyrics-line">No es algo que te pueda dar</div>
+                        <div class="lyrics-line">Pues ya es el hombre más grande de este mundo</div>
+                        <div class="lyrics-line">El que hasta aquí capaz fue de llegar."</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Así acaba el cantar de aquel que llegó</div>
+                        <div class="lyrics-line">De lo bajo a lo más alto</div>
+                        <div class="lyrics-line">Para juzgar su corazón</div>
+                        <div class="lyrics-line">Y encontrar su valor</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Dicen que aún puedes ver su sombra caer</div>
+                        <div class="lyrics-line">De lo alto de la montaña</div>
+                        <div class="lyrics-line">Cuando el sol del atardecer</div>
+                        <div class="lyrics-line">Ya se empieza a poner</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="story-section" id="song-18">
+            <div class="background-parallax" style="background-image: url('images/song18_bg.jpg');" aria-hidden="true">
+            </div>
+            <div class="content-container">
+                <button class="dock-toggle-btn" title="Colapsa a la derecha"
+                    aria-label="Colapsar contenido de la Canción 18 - El Rey Blanco">
+                    <span class="dock-icon">→</span>
+                </button>
+                <div class="content-main">
+                    <h2>El Rey Blanco</h2>
+                    <p>En el Rey Blanco veréis que nuestro limpiacubiertas <strong>David Pérez</strong> decide que está
+                        absolutamente harto de fregar sangre y limpiar desperdicios y se sienta a a echarse una partida
+                        al <strong>Hollow Knight</strong>. Por que si, ¿Acaso no sabíais que El Rey Blanco está basada
+                        en el Hollow Knight?. Pues claro, nosotros siempre gamers, nunca ungamers &#127918;.
+                        Para <strong>Ibai y Fran (guitarras)</strong> los solos son unos de los más chulos de tocar, con
+                        melodías intercaladas que suenan guay.
+                    </p>
+                    <div class="button-group">
+                        <button class="prev-btn" data-target="song-17"
+                            aria-label="Volver a la Canción 17 - La Balada de Wilfred el Enano">← <span
+                                class="full-text">Canción
+                                Anterior</span><span class="short-text">Anterior</span></button>
+                        <button class="next-btn" data-target="song-19"
+                            aria-label="Ir a la Canción 19 - La Llegada de Krampus"><span class="full-text">Siguiente
+                                Canción</span><span class="short-text">Siguiente</span> →</button>
+                    </div>
+                </div>
+                <div class="lyrics-container">
+                    <div class="lyrics-header">Letra</div>
+                    <div class="lyrics-content">
+                        <div class="lyrics-line">Ruina, llanto y dolor, locura y horror</div>
+                        <div class="lyrics-line">Donde ayer hubo paz, reinan hoy</div>
+                        <div class="lyrics-line">Mi amada ciudad, mi reino inmortal</div>
+                        <div class="lyrics-line">Muere ante mis ojos</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Falso dios, nos condenas a</div>
+                        <div class="lyrics-line">Está maldición que infecta nuestra tierra</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Estribillo:</div>
+                        <div class="lyrics-line">Si hoy he de ver mi mundo arder</div>
+                        <div class="lyrics-line">Te arrastraré conmigo</div>
+                        <div class="lyrics-line">La noche será, de tu final</div>
+                        <div class="lyrics-line">El único testigo</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Es en la oscuridad donde he de hallar</div>
+                        <div class="lyrics-line">El remedio de esta enfermedad</div>
+                        <div class="lyrics-line">Ya no habrá moral, ruego o piedad</div>
+                        <div class="lyrics-line">Que hagan que me detenga</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Cuánto habrá que sacrificar</div>
+                        <div class="lyrics-line">Nada importa ya con tal de salvar mi imperio</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Estribillo:</div>
+                        <div class="lyrics-line">Si hoy he de ver mi mundo arder</div>
+                        <div class="lyrics-line">Te arrastraré conmigo</div>
+                        <div class="lyrics-line">La noche será, de tu final</div>
+                        <div class="lyrics-line">El único testigo</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Ya puedo sentir que llega el fin</div>
+                        <div class="lyrics-line">Pero no me he rendido</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Estribillo:</div>
+                        <div class="lyrics-line">Si hoy he de ver mi mundo arder</div>
+                        <div class="lyrics-line">Te arrastraré conmigo</div>
+                        <div class="lyrics-line">La noche será, de tu final</div>
+                        <div class="lyrics-line">El único testigo</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Todo tu poder, tu alma y tu ser</div>
+                        <div class="lyrics-line">Caerán en el olvido</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="story-section" id="song-19">
+            <div class="background-parallax" style="background-image: url('images/song19_bg.jpg');" aria-hidden="true">
+            </div>
+            <div class="content-container">
+                <button class="dock-toggle-btn" title="Colapsa a la derecha"
+                    aria-label="Colapsar contenido de la Canción 19 - La Llegada de Krampus">
+                    <span class="dock-icon">→</span>
+                </button>
+                <div class="content-main">
+                    <h2>La Llegada de Krampus</h2>
+                    <p>Menudo <strong>LOCUROTE</strong> vivimos en esta canción. Contamos de nuevo con la ayuda de
+                        buenos amigos como <strong>Dark Fantasy FX,
+                            Naza y Smile</strong>, y el grandísimo (literal, con los zancos era como 2m y medio de
+                        Krampus) <strong>Mikko</strong>. También apreciaréis
+                        que en la batería hay orco (!!) con lasers en los dedos (!!). Es nuestro ex-batería
+                        <strong>Santos Martín</strong>, que se subió a tocar
+                        semejante temardo con nosotros. Al final veréis como raptan al director de la orquesta,
+                        <strong>Manuel Donoso</strong>, que nos dijo que si a todas
+                        las locuras que le íbamos planteando. ¿Que los orcos le rapten y la orquesta toque sola la
+                        siguiente canción? Palante.
+                    </p>
+                    <div class="button-group">
+                        <button class="prev-btn" data-target="song-18"
+                            aria-label="Volver a la Canción 18 - Rutas Misteriosas">← <span class="full-text">Canción
+                                Anterior</span><span class="short-text">Anterior</span></button>
+                        <button class="next-btn" data-target="song-20"
+                            aria-label="Ir a la Canción 20 - Más Allá de la Tempestad"><span class="full-text">Siguiente
+                                Canción</span><span class="short-text">Siguiente</span> →</button>
+                    </div>
+                </div>
+                <div class="lyrics-container">
+                    <div class="lyrics-header">Letra</div>
+                    <div class="lyrics-content">
+                        <div class="lyrics-line">Es un día especial, algo bueno va a surgir.</div>
+                        <div class="lyrics-line">Esta noche es Navidad, canta y se feliz.</div>
+                        <div class="lyrics-line">Si eres bueno hoy tendrás un regalo para abrir,</div>
+                        <div class="lyrics-line">si eres malo llegará Krampus a por ti.</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line section-label">Estribillo:</div>
+                        <div class="lyrics-line">Es la leyenda del horror,</div>
+                        <div class="lyrics-line">por no ser bueno a ti te eligió.</div>
+                        <div class="lyrics-line">Aunque te escondas te verá,</div>
+                        <div class="lyrics-line">cierra los ojos si le oyes llegar.</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">A la media noche cuando duermas en tu habitación,</div>
+                        <div class="lyrics-line">dejarás de ser un niño, correrá el reloj.</div>
+                        <div class="lyrics-line">Este es el castigo que mereces por hacer el mal,</div>
+                        <div class="lyrics-line">Krampus es la bestia que devuelve lo que das.</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Si te llenas de bondad una voz te arropará,</div>
+                        <div class="lyrics-line">es el guarda de tu alma, te protegerá.</div>
+                        <div class="lyrics-line">Pero si te portas mal, una pena sufrirás,</div>
+                        <div class="lyrics-line">no podrás librarte más, habrás de pagar.</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line section-label">Estribillo:</div>
+                        <div class="lyrics-line">Es la leyenda del horror,</div>
+                        <div class="lyrics-line">por no ser bueno a ti te eligió.</div>
+                        <div class="lyrics-line">Aunque te escondas te verá,</div>
+                        <div class="lyrics-line">cierra los ojos si le oyes llegar.</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">A la media noche cuando duermas en tu habitación,</div>
+                        <div class="lyrics-line">dejarás de ser un niño, correrá el reloj.</div>
+                        <div class="lyrics-line">Este es el castigo que mereces por hacer el mal,</div>
+                        <div class="lyrics-line">Krampus es la bestia que devuelve lo que das.</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line section-label">Puente:</div>
+                        <div class="lyrics-line">En el saco encontrarás miedo eterno y algo más,</div>
+                        <div class="lyrics-line">es el tiempo un castigo que te hará pensar.</div>
+                        <div class="lyrics-line">Un anciano tú serás con el tiempo te irás,</div>
+                        <div class="lyrics-line">nunca más serás un niño por obrar el mal.</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line section-label">Estribillo:</div>
+                        <div class="lyrics-line">Es la leyenda del horror,</div>
+                        <div class="lyrics-line">por no ser bueno a ti te eligió.</div>
+                        <div class="lyrics-line">Aunque te escondas te verá,</div>
+                        <div class="lyrics-line">cierra los ojos si le oyes llegar.</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">A la media noche cuando duermas en tu habitación,</div>
+                        <div class="lyrics-line">dejarás de ser un niño, correrá el reloj.</div>
+                        <div class="lyrics-line">Este es el castigo que mereces por hacer el mal,</div>
+                        <div class="lyrics-line">Krampus es la bestia que devuelve lo que das. (x3)</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="story-section" id="song-20">
+            <div class="background-parallax" style="background-image: url('images/song20_bg.jpg');" aria-hidden="true">
+            </div>
+            <div class="content-container">
+                <button class="dock-toggle-btn" title="Colapsa a la derecha"
+                    aria-label="Colapsar contenido de la Canción 20 - Más Allá de la Tempestad">
+                    <span class="dock-icon">→</span>
+                </button>
+                <div class="content-main">
+                    <h2>Más Allá de la Tempestad</h2>
+                    <p>Aquí llegamos al final del concierto, y nos despedimos con <strong>Mas Allá de la
+                            Tempestad</strong>, otro clasicazo que nunca falta. Aquí de nuevo la orquesta hace un
+                        trabajo impresionante,
+                        y queríamos darle un giro especial al tema: Atentos a la la parte central del tema, ¿Os suena de
+                        algo? Digamos que <strong>Jack Sparrow</strong> estaria orgulloso de nosotros. Muy atentos al
+                        regreso de Manuel al final del tema, magullado de la pelea con los orcos.
+                        Que increíble experiencia, muchas gracias a todos por ser parte de ella.
+                    </p>
+                    <div class="button-group">
+                        <button class="prev-btn" data-target="song-19"
+                            aria-label="Volver a la Canción 19 - La Llegada de Krampus">← <span
+                                class="full-text">Canción Anterior</span><span
+                                class="short-text">Anterior</span></button>
+                        <button class="next-btn" data-target="end">Finalizar</button>
+                    </div>
+                </div>
+                <div class="lyrics-container">
+                    <div class="lyrics-header">Letra</div>
+                    <div class="lyrics-content">
+                        <div class="lyrics-line">Hemos perdido el rumbo, negras nubes paso dan</div>
+                        <div class="lyrics-line">Al horizonte oculto en alta mar</div>
+                        <div class="lyrics-line">La tormenta ha cesado, el oleaje está en paz</div>
+                        <div class="lyrics-line">El silencio nos aborda en la oscuridad</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">El frío nos agota y nos hace enloquecer</div>
+                        <div class="lyrics-line">La luna está apagada, el viento también</div>
+                        <div class="lyrics-line">La muerte se oye cerca, su presencia se hace ver</div>
+                        <div class="lyrics-line">No encontramos la salida, si es que ha de haber</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">La tripulación se debe unir</div>
+                        <div class="lyrics-line">Para un día más sobrevivir</div>
+                        <div class="lyrics-line">Escapar de cada adversidad</div>
+                        <div class="lyrics-line">Y a la locura conquistar</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Estribillo:</div>
+                        <div class="lyrics-line">Más allá de la tempestad</div>
+                        <div class="lyrics-line">Donde el cielo se funde en el mar</div>
+                        <div class="lyrics-line">Imploramos al viento soplar</div>
+                        <div class="lyrics-line">Para a nuestro hogar regresar</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Sopla el viento muy despacio hacia una dirección</div>
+                        <div class="lyrics-line">Las velas le acompañan junto al timón</div>
+                        <div class="lyrics-line">Ellos guiarán los remos hasta al fin la tierra ver</div>
+                        <div class="lyrics-line">O la muerte conocer</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">La tripulación se debe unir</div>
+                        <div class="lyrics-line">Para un día más sobrevivir</div>
+                        <div class="lyrics-line">Escapar de cada adversidad</div>
+                        <div class="lyrics-line">Y a la locura conquistar</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Estribillo:</div>
+                        <div class="lyrics-line">Más allá de la tempestad</div>
+                        <div class="lyrics-line">Donde el cielo se funde en el mar</div>
+                        <div class="lyrics-line">Imploramos al viento soplar</div>
+                        <div class="lyrics-line">Para a nuestro hogar regresar</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Viento que nunca morirá</div>
+                        <div class="lyrics-line">Siempre acaba por regresar</div>
+                        <div class="lyrics-line">Alza las velas y coge el timón</div>
+                        <div class="lyrics-line">Nuestro destino se encuentra a babor</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Estribillo:</div>
+                        <div class="lyrics-line">Más allá de la tempestad</div>
+                        <div class="lyrics-line">Donde el cielo se funde en el mar</div>
+                        <div class="lyrics-line">Imploramos al viento soplar</div>
+                        <div class="lyrics-line">Para a nuestro hogar regresar</div>
+                        <div class="lyrics-line"></div>
+                        <div class="lyrics-line">Más allá de la tempestad</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top-btn" class="scroll-to-top-btn" title="Volver Arriba"
+        aria-label="Volver al inicio de la página">
+        <span>↑</span>
+    </button>
+
+    <footer>
+        <p>&copy; 2025 Ekyrian. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
